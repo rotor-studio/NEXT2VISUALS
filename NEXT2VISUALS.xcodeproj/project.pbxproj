@@ -1,0 +1,814 @@
+{
+	"archiveVersion": "1",
+	"classes": {},
+	"objectVersion": "54",
+	"objects": {
+		"04C3035B-16C4-4626-A929-C89E6637898B": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDISender.cpp",
+			"path": "../../../addons/ofxNDI/src/ofxNDISender.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"082A867D-6033-4D8D-B092-443319472A97": {
+			"fileRef": "97979180-2C05-4B59-A7B5-1334F3BB3534",
+			"isa": "PBXBuildFile"
+		},
+		"0A350E0E-5A2B-4E00-90CA-618FE671492B": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIRecvStream.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDIRecvStream.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"0DC1BA5E-9C4D-4313-9647-5BE62FA13337": {
+			"fileRef": "3270BA31-7A06-428B-A0A6-40EC2A8839A5",
+			"isa": "PBXBuildFile"
+		},
+		"0E50C3F3-71C3-4F7C-8964-E6CB25138553": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIReceiver.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDIReceiver.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"17920274-FFF1-497B-AB3F-88978331706F": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDISendStream.cpp",
+			"path": "../../../addons/ofxNDI/src/ofxNDISendStream.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"191CD6FA2847E21E0085CBB6": {
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "text.plist.entitlements",
+			"path": "of.entitlements",
+			"sourceTree": "<group>"
+		},
+		"191EF70929D778A400F35F26": {
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "folder",
+			"name": "openFrameworks",
+			"path": "../../../libs/openFrameworks",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"19B789C429E5AB4A0082E9B8": {
+			"buildActionMask": "2147483647",
+			"files": [],
+			"inputFileListPaths": [],
+			"inputPaths": [],
+			"isa": "PBXShellScriptBuildPhase",
+			"outputFileListPaths": [],
+			"outputPaths": [],
+			"runOnlyForDeploymentPostprocessing": "0",
+			"shellPath": "/bin/sh",
+			"shellScript": "\"$OF_PATH/scripts/osx/xcode_project.sh\"\n",
+			"showEnvVarsInLog": "0"
+		},
+		"26CCCD7A-5F5A-4932-A4F9-707ECB855751": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.Routing.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Routing.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"2733152A-0A58-47FA-AFF0-F6E9A2381B09": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIPTZ.cpp",
+			"path": "../../../addons/ofxNDI/src/ofxNDIPTZ.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"308379E2-A99B-4EE8-8CE4-2D1F4AE973E3": {
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "compiled.mach-o.dylib",
+			"name": "libndi.4.dylib",
+			"path": "../../../addons/ofxNDI/libs/NDI/lib/osx/x64/libndi.4.dylib",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"3266ED81-2F10-4944-BC58-6D61452DAECE": {
+			"fileRef": "E84A9FEB-1893-4F8F-9667-C410B5448681",
+			"isa": "PBXBuildFile"
+		},
+		"3270BA31-7A06-428B-A0A6-40EC2A8839A5": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIFrame.cpp",
+			"path": "../../../addons/ofxNDI/src/ofxNDIFrame.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"32FB365F-DE32-4719-87D3-F26168EA3FFB": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDISendStream.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDISendStream.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"38F89B40-DBF5-48CC-92DB-F81148EBD8C3": {
+			"fileRef": "A0D79F7F-F0A6-4C2E-8E80-BC64E9F93CF4",
+			"isa": "PBXBuildFile"
+		},
+		"3CEB9758-EEA9-41AA-9AD4-5F6A21A23066": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.Send.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Send.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"3DB14430-B8AE-458A-87C7-5E81AEC964E3": {
+			"fileRef": "308379E2-A99B-4EE8-8CE4-2D1F4AE973E3",
+			"isa": "PBXBuildFile",
+			"settings": {
+				"ATTRIBUTES": [
+					"CodeSignOnCopy"
+				]
+			}
+		},
+		"3F6F752E-565D-4105-B4F9-2C3D62BC91DA": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.utilities.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.utilities.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"3FB79409-D9A0-4FE3-AC16-607B50A7919C": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIRouter.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDIRouter.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"4E00B0A9-7737-422B-8E69-449966C50424": {
+			"fileRef": "A1AFF6FF-F189-4675-ACF6-43B1E050632D",
+			"isa": "PBXBuildFile"
+		},
+		"4E9FEF05-23EB-4A88-B727-63E40DA00386": {
+			"children": [
+				"F4C8300E-589A-41C7-A78E-6311381A2716",
+				"DEE69B1C-0A98-4A2B-AC41-13A717B87FF6"
+			],
+			"isa": "PBXGroup",
+			"name": "ofxNDI",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"4F0EA262-45B2-4D98-A5B5-916FD90C5D9F": {
+			"children": [
+				"A1AFF6FF-F189-4675-ACF6-43B1E050632D",
+				"E96B9426-9C37-40E8-8B74-6D211087A2E7",
+				"85884A05-6B3D-4B70-92D5-5D41BAEA6576",
+				"DF925639-B05D-46CD-991B-AC4416CD22A0"
+			],
+			"isa": "PBXGroup",
+			"name": "utils",
+			"path": "../../../addons/ofxNDI/src/utils",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"524D4CC3-ABB8-4426-B0F9-231FF184551A": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.Recv.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Recv.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"5ED17057-27F3-4F9D-8018-ACAE219E8213": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDISender.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDISender.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"61A07477-83D3-4113-9E54-A512A60D6F01": {
+			"fileRef": "308379E2-A99B-4EE8-8CE4-2D1F4AE973E3",
+			"isa": "PBXBuildFile",
+			"settings": {
+				"ATTRIBUTES": [
+					"CodeSignOnCopy"
+				]
+			}
+		},
+		"69BDBA16-FB15-4BE6-AA4B-D4BF4B5C049F": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIFinder.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDIFinder.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"6BCA9942-353A-4582-A0FA-571E3D1A82B3": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.FrameSync.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.FrameSync.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"6E6707E3-880F-4EF5-8EEE-7E61912B1903": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIReceiver.cpp",
+			"path": "../../../addons/ofxNDI/src/ofxNDIReceiver.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"6F4CBAD7-FF8A-4892-A97B-29DE5943415F": {
+			"children": [
+				"C92246C5-4D1A-4558-8E9D-3926CBFB88F8"
+			],
+			"isa": "PBXGroup",
+			"name": "lib",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"71C1CA73-5FAC-483D-BDC6-1AB1D56CED94": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.Lib.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Lib.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"7E4A3951-85B8-4282-BBB9-81EC4FABC5A9": {
+			"children": [
+				"308379E2-A99B-4EE8-8CE4-2D1F4AE973E3"
+			],
+			"isa": "PBXGroup",
+			"name": "x64",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"7FC39BF9-710A-4BEC-8834-6C18D1D2FB98": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDI.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDI.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"85884A05-6B3D-4B70-92D5-5D41BAEA6576": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIVideoGrabber.cpp",
+			"path": "../../../addons/ofxNDI/src/utils/ofxNDIVideoGrabber.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"8821FB0C-7C18-45D5-8826-D37E64DFF37A": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.Recv.ex.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Recv.ex.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"89784D56-242B-4925-B496-13B210E308F3": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIRecorder.cpp",
+			"path": "../../../addons/ofxNDI/src/ofxNDIRecorder.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"9301CB2E-EDAC-404E-858D-E05674819FCB": {
+			"children": [
+				"6F4CBAD7-FF8A-4892-A97B-29DE5943415F",
+				"95CED342-1153-432D-A6CD-02A428F3C555"
+			],
+			"isa": "PBXGroup",
+			"name": "NDI",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"93A392B5-5FF3-43BE-AF61-F3CE2C16497E": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.Find.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Find.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"95CED342-1153-432D-A6CD-02A428F3C555": {
+			"children": [
+				"AA605E65-97FC-46E9-9409-F1567034ED05",
+				"93A392B5-5FF3-43BE-AF61-F3CE2C16497E",
+				"6BCA9942-353A-4582-A0FA-571E3D1A82B3",
+				"C4790DA7-891F-48D1-A8EF-18DAF190A0FA",
+				"71C1CA73-5FAC-483D-BDC6-1AB1D56CED94",
+				"8821FB0C-7C18-45D5-8826-D37E64DFF37A",
+				"524D4CC3-ABB8-4426-B0F9-231FF184551A",
+				"26CCCD7A-5F5A-4932-A4F9-707ECB855751",
+				"3CEB9758-EEA9-41AA-9AD4-5F6A21A23066",
+				"9A2F6912-5315-4FD2-B189-68FEBA2EEC25",
+				"E3CFF4F7-92B8-42C7-8093-45838A491A75",
+				"FF23CBD4-E722-4EA7-8E91-302C74D570E8",
+				"3F6F752E-565D-4105-B4F9-2C3D62BC91DA"
+			],
+			"isa": "PBXGroup",
+			"name": "include",
+			"path": "../../../addons/ofxNDI/libs/NDI/include",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"96021507-0E6D-4D3F-8C5E-8471D3826F72": {
+			"fileRef": "6E6707E3-880F-4EF5-8EEE-7E61912B1903",
+			"isa": "PBXBuildFile"
+		},
+		"9690481B-A796-4780-9A97-A7FB380DC4C6": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIPTZ.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDIPTZ.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"97979180-2C05-4B59-A7B5-1334F3BB3534": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIRouter.cpp",
+			"path": "../../../addons/ofxNDI/src/ofxNDIRouter.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"9A2F6912-5315-4FD2-B189-68FEBA2EEC25": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.compat.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.compat.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"9FA06931-25E0-4B5C-8998-1EFD073BD45B": {
+			"fileRef": "04C3035B-16C4-4626-A929-C89E6637898B",
+			"isa": "PBXBuildFile"
+		},
+		"A0D79F7F-F0A6-4C2E-8E80-BC64E9F93CF4": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIFinder.cpp",
+			"path": "../../../addons/ofxNDI/src/ofxNDIFinder.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"A1AFF6FF-F189-4675-ACF6-43B1E050632D": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIVideoCaster.cpp",
+			"path": "../../../addons/ofxNDI/src/utils/ofxNDIVideoCaster.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"A575FDBF-FBE0-4CF6-B043-187EF85DEB32": {
+			"children": [
+				"F11554CD-EBD8-480E-8D24-EEA0F45A912E"
+			],
+			"isa": "PBXGroup",
+			"name": "utils",
+			"path": "../../../addons/ofxNDI/libs/utils",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"A7525109-92A4-4688-9808-F5E6548B8369": {
+			"fileRef": "17920274-FFF1-497B-AB3F-88978331706F",
+			"isa": "PBXBuildFile"
+		},
+		"AA605E65-97FC-46E9-9409-F1567034ED05": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.DynamicLoad.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.DynamicLoad.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"B70A1691-2043-4D11-9463-54DD7AA6E266": {
+			"fileRef": "89784D56-242B-4925-B496-13B210E308F3",
+			"isa": "PBXBuildFile"
+		},
+		"BB4B014C10F69532006C3DED": {
+			"children": [
+				"4E9FEF05-23EB-4A88-B727-63E40DA00386"
+			],
+			"isa": "PBXGroup",
+			"name": "addons",
+			"path": "../../../addons",
+			"sourceTree": "<group>"
+		},
+		"C4790DA7-891F-48D1-A8EF-18DAF190A0FA": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.Lib.cplusplus.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Lib.cplusplus.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"C92246C5-4D1A-4558-8E9D-3926CBFB88F8": {
+			"children": [
+				"7E4A3951-85B8-4282-BBB9-81EC4FABC5A9"
+			],
+			"isa": "PBXGroup",
+			"name": "osx",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"CB31B3D0-BE64-4D80-BF57-53C1E3B0ABA2": {
+			"fileRef": "85884A05-6B3D-4B70-92D5-5D41BAEA6576",
+			"isa": "PBXBuildFile"
+		},
+		"D46BE89B-2400-4C1E-BFBF-23CBB1468E79": {
+			"fileRef": "2733152A-0A58-47FA-AFF0-F6E9A2381B09",
+			"isa": "PBXBuildFile"
+		},
+		"DEE69B1C-0A98-4A2B-AC41-13A717B87FF6": {
+			"children": [
+				"7FC39BF9-710A-4BEC-8834-6C18D1D2FB98",
+				"A0D79F7F-F0A6-4C2E-8E80-BC64E9F93CF4",
+				"69BDBA16-FB15-4BE6-AA4B-D4BF4B5C049F",
+				"3270BA31-7A06-428B-A0A6-40EC2A8839A5",
+				"F9A60BA0-27F2-427C-B85C-370DB1E3AB19",
+				"2733152A-0A58-47FA-AFF0-F6E9A2381B09",
+				"9690481B-A796-4780-9A97-A7FB380DC4C6",
+				"6E6707E3-880F-4EF5-8EEE-7E61912B1903",
+				"0E50C3F3-71C3-4F7C-8964-E6CB25138553",
+				"89784D56-242B-4925-B496-13B210E308F3",
+				"FB00D28E-C9B5-41A0-8E59-5DEB764D4629",
+				"E84A9FEB-1893-4F8F-9667-C410B5448681",
+				"0A350E0E-5A2B-4E00-90CA-618FE671492B",
+				"97979180-2C05-4B59-A7B5-1334F3BB3534",
+				"3FB79409-D9A0-4FE3-AC16-607B50A7919C",
+				"17920274-FFF1-497B-AB3F-88978331706F",
+				"32FB365F-DE32-4719-87D3-F26168EA3FFB",
+				"04C3035B-16C4-4626-A929-C89E6637898B",
+				"5ED17057-27F3-4F9D-8018-ACAE219E8213",
+				"4F0EA262-45B2-4D98-A5B5-916FD90C5D9F"
+			],
+			"isa": "PBXGroup",
+			"name": "src",
+			"path": "../../../addons/ofxNDI/src",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"DF925639-B05D-46CD-991B-AC4416CD22A0": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIVideoGrabber.h",
+			"path": "../../../addons/ofxNDI/src/utils/ofxNDIVideoGrabber.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E3CFF4F7-92B8-42C7-8093-45838A491A75": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.deprecated.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.deprecated.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E42962A92163ECCD00A6A9E2": {
+			"alwaysOutOfDate": "1",
+			"buildActionMask": "2147483647",
+			"files": [],
+			"inputPaths": [],
+			"isa": "PBXShellScriptBuildPhase",
+			"name": "Run Script — Compile OF",
+			"outputPaths": [],
+			"runOnlyForDeploymentPostprocessing": "0",
+			"shellPath": "/bin/sh",
+			"shellScript": "echo \"💾 Compiling Openframeworks\"\nxcodebuild -project \"$OF_PATH/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj\" -target openFrameworks -configuration \"${CONFIGURATION}\"  CLANG_CXX_LANGUAGE_STANDARD=$CLANG_CXX_LANGUAGE_STANDARD MACOSX_DEPLOYMENT_TARGET=$MACOSX_DEPLOYMENT_TARGET GCC_PREPROCESSOR_DEFINITIONS=$USER_PREPROCESSOR_DEFINITIONS\n",
+			"showEnvVarsInLog": "0"
+		},
+		"E4A5B60F29BAAAE400C2D356": {
+			"buildActionMask": "2147483647",
+			"dstPath": "",
+			"dstSubfolderSpec": "6",
+			"files": [
+				"3DB14430-B8AE-458A-87C7-5E81AEC964E3"
+			],
+			"isa": "PBXCopyFilesBuildPhase",
+			"runOnlyForDeploymentPostprocessing": "0"
+		},
+		"E4B69B4A0A3A1720003C02F2": {
+			"children": [
+				"191CD6FA2847E21E0085CBB6",
+				"E4B6FCAD0C3E899E008CF71C",
+				"E4EB6923138AFD0F00A09F29",
+				"E4B69E1C0A3A1BDC003C02F2",
+				"191EF70929D778A400F35F26",
+				"BB4B014C10F69532006C3DED",
+				"E4B69B5B0A3A1756003C02F2"
+			],
+			"isa": "PBXGroup",
+			"sourceTree": "<group>"
+		},
+		"E4B69B4C0A3A1720003C02F2": {
+			"attributes": {
+				"LastUpgradeCheck": "0600"
+			},
+			"buildConfigurationList": "E4B69B4D0A3A1720003C02F2",
+			"compatibilityVersion": "Xcode 3.2",
+			"developmentRegion": "en",
+			"hasScannedForEncodings": "0",
+			"isa": "PBXProject",
+			"knownRegions": [
+				"en",
+				"Base"
+			],
+			"mainGroup": "E4B69B4A0A3A1720003C02F2",
+			"productRefGroup": "E4B69B4A0A3A1720003C02F2",
+			"projectDirPath": "",
+			"projectRoot": "",
+			"targets": [
+				"E4B69B5A0A3A1756003C02F2"
+			]
+		},
+		"E4B69B4D0A3A1720003C02F2": {
+			"buildConfigurations": [
+				"E4B69B4E0A3A1720003C02F2",
+				"E4B69B4F0A3A1720003C02F2"
+			],
+			"defaultConfigurationIsVisible": "0",
+			"defaultConfigurationName": "Release",
+			"isa": "XCConfigurationList"
+		},
+		"E4B69B4E0A3A1720003C02F2": {
+			"baseConfigurationReference": "E4EB6923138AFD0F00A09F29",
+			"buildSettings": {
+				"CODE_SIGN_ENTITLEMENTS": "of.entitlements",
+				"COPY_PHASE_STRIP": "NO",
+				"ENABLE_TESTABILITY": "YES",
+				"GCC_OPTIMIZATION_LEVEL": "0",
+				"GCC_WARN_UNUSED_VARIABLE": "NO",
+				"HEADER_SEARCH_PATHS": [
+					"$(OF_CORE_HEADERS)",
+					"src"
+				],
+				"OTHER_CPLUSPLUSFLAGS": "-D__MACOSX_CORE__"
+			},
+			"isa": "XCBuildConfiguration",
+			"name": "Debug"
+		},
+		"E4B69B4F0A3A1720003C02F2": {
+			"baseConfigurationReference": "E4EB6923138AFD0F00A09F29",
+			"buildSettings": {
+				"CODE_SIGN_ENTITLEMENTS": "of.entitlements",
+				"COPY_PHASE_STRIP": "YES",
+				"GCC_OPTIMIZATION_LEVEL": "3",
+				"GCC_UNROLL_LOOPS": "YES",
+				"HEADER_SEARCH_PATHS": [
+					"$(OF_CORE_HEADERS)",
+					"src"
+				],
+				"OTHER_CPLUSPLUSFLAGS": "-D__MACOSX_CORE__"
+			},
+			"isa": "XCBuildConfiguration",
+			"name": "Release"
+		},
+		"E4B69B580A3A1756003C02F2": {
+			"buildActionMask": "2147483647",
+			"files": [
+				"E4B69E200A3A1BDC003C02F2",
+				"E4B69E210A3A1BDC003C02F2",
+				"38F89B40-DBF5-48CC-92DB-F81148EBD8C3",
+				"0DC1BA5E-9C4D-4313-9647-5BE62FA13337",
+				"D46BE89B-2400-4C1E-BFBF-23CBB1468E79",
+				"96021507-0E6D-4D3F-8C5E-8471D3826F72",
+				"B70A1691-2043-4D11-9463-54DD7AA6E266",
+				"3266ED81-2F10-4944-BC58-6D61452DAECE",
+				"082A867D-6033-4D8D-B092-443319472A97",
+				"A7525109-92A4-4688-9808-F5E6548B8369",
+				"9FA06931-25E0-4B5C-8998-1EFD073BD45B",
+				"4E00B0A9-7737-422B-8E69-449966C50424",
+				"CB31B3D0-BE64-4D80-BF57-53C1E3B0ABA2"
+			],
+			"isa": "PBXSourcesBuildPhase",
+			"runOnlyForDeploymentPostprocessing": "0"
+		},
+		"E4B69B590A3A1756003C02F2": {
+			"buildActionMask": "2147483647",
+			"files": [],
+			"isa": "PBXFrameworksBuildPhase",
+			"runOnlyForDeploymentPostprocessing": "0"
+		},
+		"E4B69B5A0A3A1756003C02F2": {
+			"buildConfigurationList": "E4B69B5F0A3A1757003C02F2",
+			"buildPhases": [
+				"E42962A92163ECCD00A6A9E2",
+				"E4B69B580A3A1756003C02F2",
+				"E4B69B590A3A1756003C02F2",
+				"E4C2427710CC5ABF004149E2",
+				"E4A5B60F29BAAAE400C2D356",
+				"19B789C429E5AB4A0082E9B8"
+			],
+			"buildRules": [],
+			"dependencies": [],
+			"isa": "PBXNativeTarget",
+			"name": "NEXT2VISUALS",
+			"productName": "myOFApp",
+			"productReference": "E4B69B5B0A3A1756003C02F2",
+			"productType": "com.apple.product-type.application"
+		},
+		"E4B69B5B0A3A1756003C02F2": {
+			"explicitFileType": "wrapper.application",
+			"includeInIndex": "0",
+			"isa": "PBXFileReference",
+			"path": "NEXT2VISUALSDebug.app",
+			"sourceTree": "BUILT_PRODUCTS_DIR"
+		},
+		"E4B69B5F0A3A1757003C02F2": {
+			"buildConfigurations": [
+				"E4B69B600A3A1757003C02F2",
+				"E4B69B610A3A1757003C02F2"
+			],
+			"defaultConfigurationIsVisible": "0",
+			"defaultConfigurationName": "Release",
+			"isa": "XCConfigurationList"
+		},
+		"E4B69B600A3A1757003C02F2": {
+			"baseConfigurationReference": "E4EB6923138AFD0F00A09F29",
+			"buildSettings": {
+				"ARCHS": "$(ARCHS_STANDARD)",
+				"COPY_PHASE_STRIP": "NO",
+				"FRAMEWORK_SEARCH_PATHS": "$(inherited)",
+				"GCC_DYNAMIC_NO_PIC": "NO",
+				"HEADER_SEARCH_PATHS": [
+					"$(OF_CORE_HEADERS)",
+					"src",
+					"../../../addons/ofxNDI/libs/NDI/include",
+					"../../../addons/ofxNDI/libs/utils",
+					"../../../addons/ofxNDI/src",
+					"../../../addons/ofxNDI/src/utils"
+				],
+				"LIBRARY_SEARCH_PATHS": "$(inherited)",
+				"OTHER_LDFLAGS": [
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF_DEBUG)",
+					"../../../addons/ofxNDI/libs/NDI/lib/osx/x64/libndi.4.dylib",
+					"-Xlinker",
+					"-rpath",
+					"-Xlinker",
+					"@executable_path"
+				]
+			},
+			"isa": "XCBuildConfiguration",
+			"name": "Debug"
+		},
+		"E4B69B610A3A1757003C02F2": {
+			"baseConfigurationReference": "E4EB6923138AFD0F00A09F29",
+			"buildSettings": {
+				"ARCHS": "$(ARCHS_STANDARD)",
+				"COPY_PHASE_STRIP": "YES",
+				"FRAMEWORK_SEARCH_PATHS": "$(inherited)",
+				"HEADER_SEARCH_PATHS": [
+					"$(OF_CORE_HEADERS)",
+					"src",
+					"../../../addons/ofxNDI/libs/NDI/include",
+					"../../../addons/ofxNDI/libs/utils",
+					"../../../addons/ofxNDI/src",
+					"../../../addons/ofxNDI/src/utils"
+				],
+				"LIBRARY_SEARCH_PATHS": "$(inherited)",
+				"OTHER_LDFLAGS": [
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF)",
+					"../../../addons/ofxNDI/libs/NDI/lib/osx/x64/libndi.4.dylib",
+					"-Xlinker",
+					"-rpath",
+					"-Xlinker",
+					"@executable_path"
+				],
+				"baseConfigurationReference": "E4EB6923138AFD0F00A09F29"
+			},
+			"isa": "XCBuildConfiguration",
+			"name": "Release"
+		},
+		"E4B69E1C0A3A1BDC003C02F2": {
+			"children": [
+				"E4B69E1D0A3A1BDC003C02F2",
+				"E4B69E1E0A3A1BDC003C02F2",
+				"E4B69E1F0A3A1BDC003C02F2"
+			],
+			"isa": "PBXGroup",
+			"path": "src",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E4B69E1D0A3A1BDC003C02F2": {
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "sourcecode.cpp.cpp",
+			"name": "main.cpp",
+			"path": "src/main.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E4B69E1E0A3A1BDC003C02F2": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofApp.cpp",
+			"path": "src/ofApp.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E4B69E1F0A3A1BDC003C02F2": {
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "sourcecode.c.h",
+			"name": "ofApp.h",
+			"path": "src/ofApp.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E4B69E200A3A1BDC003C02F2": {
+			"fileRef": "E4B69E1D0A3A1BDC003C02F2",
+			"isa": "PBXBuildFile"
+		},
+		"E4B69E210A3A1BDC003C02F2": {
+			"fileRef": "E4B69E1E0A3A1BDC003C02F2",
+			"isa": "PBXBuildFile"
+		},
+		"E4B6FCAD0C3E899E008CF71C": {
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "text.plist.xml",
+			"path": "openFrameworks-Info.plist",
+			"sourceTree": "<group>"
+		},
+		"E4C2427710CC5ABF004149E2": {
+			"buildActionMask": "2147483647",
+			"dstPath": "",
+			"dstSubfolderSpec": "10",
+			"files": [],
+			"isa": "PBXCopyFilesBuildPhase",
+			"runOnlyForDeploymentPostprocessing": "0"
+		},
+		"E4EB6923138AFD0F00A09F29": {
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "text.xcconfig",
+			"path": "Project.xcconfig",
+			"sourceTree": "<group>"
+		},
+		"E84A9FEB-1893-4F8F-9667-C410B5448681": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIRecvStream.cpp",
+			"path": "../../../addons/ofxNDI/src/ofxNDIRecvStream.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E96B9426-9C37-40E8-8B74-6D211087A2E7": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIVideoCaster.h",
+			"path": "../../../addons/ofxNDI/src/utils/ofxNDIVideoCaster.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"F11554CD-EBD8-480E-8D24-EEA0F45A912E": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "DoubleBuffer.h",
+			"path": "../../../addons/ofxNDI/libs/utils/DoubleBuffer.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"F4C8300E-589A-41C7-A78E-6311381A2716": {
+			"children": [
+				"9301CB2E-EDAC-404E-858D-E05674819FCB",
+				"A575FDBF-FBE0-4CF6-B043-187EF85DEB32"
+			],
+			"isa": "PBXGroup",
+			"name": "libs",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"F9A60BA0-27F2-427C-B85C-370DB1E3AB19": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIFrame.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDIFrame.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"FB00D28E-C9B5-41A0-8E59-5DEB764D4629": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIRecorder.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDIRecorder.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"FF23CBD4-E722-4EA7-8E91-302C74D570E8": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.structs.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.structs.h",
+			"sourceTree": "SOURCE_ROOT"
+		}
+	},
+	"openFrameworksProjectGeneratorVersion": "21",
+	"rootObject": "E4B69B4C0A3A1720003C02F2"
+}
