@@ -10,6 +10,8 @@ uniform float threshold;
 uniform float noiseStrength;
 uniform int collide;
 uniform int invertMask;
+uniform float topBias;
+uniform float bounceDampen;
 uniform float time;
 
 in vec2 vTexCoord;
@@ -49,7 +51,7 @@ void main(){
 
     // bounce / splash on bright
     if(collide == 1 && maskInfluence > 0.5 && vel.y > 0.0){
-        float bounce = mix(0.35, 0.65, maskInfluence);
+        float bounce = mix(0.35, 0.65, maskInfluence) * bounceDampen;
         vel.y *= -bounce;
         float nn = hash(vTexCoord + time * 0.7);
         vel.x += (nn - 0.5) * (0.35 + maskInfluence * 0.5);
@@ -69,7 +71,8 @@ void main(){
     // respawn at top if out of bounds
     if(pos.y > 1.02 || pos.y < -0.1){
         float r = hash(vec2(vTexCoord.y * 1.37, time * 0.5));
-        pos = vec2(r, -0.05);
+        float bias = mix(0.0, 0.25, topBias);
+        pos = vec2(r, -0.05 + bias);
         vel = vec2(0.0, 0.0);
     }
 

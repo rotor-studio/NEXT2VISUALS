@@ -14,6 +14,30 @@ void ofApp::setup(){
 	finder_.watchSources();
 	ofLogNotice("NEXT2VISUALS") << "data path: " << ofToDataPath("", true);
 	setupCascade();
+
+	gui_.setup("NEXT2VISUALS");
+	pGravity_.set("gravity", gravity_, 0.1f, 8.0f);
+	pNoise_.set("noise", noiseStrength_, 0.0f, 2.5f);
+	pThreshold_.set("threshold", threshold_, 0.0f, 1.0f);
+	pPointSize_.set("point size", pointSize_, 1.0f, 15.0f);
+	pSimDensity_.set("sim density", simDensity_, 0.05f, 0.6f);
+	pTopBias_.set("top bias", topBias_, 0.0f, 0.5f);
+	pBounceDampen_.set("bounce dampen", bounceDampen_, 0.1f, 1.0f);
+	pCollide_.set("collide mask", collide_);
+	pInvertMask_.set("invert mask", invertMask_);
+	pShowMask_.set("show mask", showMask_);
+	pRenderSquares_.set("render squares", renderSquares_);
+	gui_.add(pGravity_);
+	gui_.add(pNoise_);
+	gui_.add(pThreshold_);
+	gui_.add(pPointSize_);
+	gui_.add(pSimDensity_);
+	gui_.add(pTopBias_);
+	gui_.add(pBounceDampen_);
+	gui_.add(pCollide_);
+	gui_.add(pInvertMask_);
+	gui_.add(pShowMask_);
+	gui_.add(pRenderSquares_);
 }
 
 //--------------------------------------------------------------
@@ -69,9 +93,42 @@ void ofApp::update(){
 	}
 
 	if(particlesReady_) {
+		// sync GUI params to runtime values
+		if(showGui_) {
+			gravity_ = pGravity_;
+			noiseStrength_ = pNoise_;
+			threshold_ = pThreshold_;
+			pointSize_ = pPointSize_;
+			topBias_ = pTopBias_;
+			bounceDampen_ = pBounceDampen_;
+			collide_ = pCollide_;
+			invertMask_ = pInvertMask_;
+			showMask_ = pShowMask_;
+			renderSquares_ = pRenderSquares_;
+			float newDensity = pSimDensity_;
+			if(fabs(newDensity - simDensity_) > 0.005f) {
+				simDensity_ = newDensity;
+				computeSimRes();
+				rebuildCascade();
+			}
+		} else {
+			// keep GUI sliders in sync if toggled off/on
+			pGravity_ = gravity_;
+			pNoise_ = noiseStrength_;
+			pThreshold_ = threshold_;
+			pPointSize_ = pointSize_;
+			pTopBias_ = topBias_;
+			pBounceDampen_ = bounceDampen_;
+			pCollide_ = collide_;
+			pInvertMask_ = invertMask_;
+			pShowMask_ = showMask_;
+			pSimDensity_ = simDensity_;
+			pRenderSquares_ = renderSquares_;
+		}
+
 		updateParticles(ofGetLastFrameTime());
 	}
-	}
+}
 
 //--------------------------------------------------------------
 void ofApp::draw(){
@@ -108,6 +165,13 @@ void ofApp::draw(){
 		drawCascade();
 		ofDisableBlendMode();
 	}
+
+	if(showGui_) {
+		ofPushStyle();
+		ofSetColor(255);
+		gui_.draw();
+		ofPopStyle();
+	}
 }
 
 //--------------------------------------------------------------
@@ -125,10 +189,15 @@ void ofApp::keyPressed(int key){
 	if(key == 'm' || key == 'M') {
 		showMask_ = !showMask_;
 		ofLogNotice("NEXT2VISUALS") << "Mostrar máscara: " << (showMask_ ? "ON" : "OFF");
+		pShowMask_ = showMask_;
 	}
 	if(key == 'c' || key == 'C') {
 		collide_ = !collide_;
 		ofLogNotice("NEXT2VISUALS") << "Colisiones máscara: " << (collide_ ? "ON" : "OFF");
+		pCollide_ = collide_;
+	}
+	if(key == 'g' || key == 'G') {
+		showGui_ = !showGui_;
 	}
 }
 
@@ -281,7 +350,7 @@ void ofApp::setupCascade(){
 
 //--------------------------------------------------------------
 void ofApp::computeSimRes(){
-	int w = std::max(200, std::min(1000, int(ofGetWidth() * simDensity_)));
+	int w = std::max(200, int(ofGetWidth() * simDensity_));
 	int h = std::max(300, int(float(w) * (float(ofGetHeight())/float(ofGetWidth()))));
 	simRes_.x = w;
 	simRes_.y = h;
@@ -372,6 +441,8 @@ void ofApp::updateParticles(float dt){
 	updateShader_.setUniform1f("noiseStrength", noiseStrength_);
 	updateShader_.setUniform1i("collide", useMask ? 1 : 0);
 	updateShader_.setUniform1i("invertMask", invertMask_ ? 1 : 0);
+	updateShader_.setUniform1f("topBias", topBias_);
+	updateShader_.setUniform1f("bounceDampen", bounceDampen_);
 	updateShader_.setUniform1f("time", ofGetElapsedTimef());
 	ping_[curPing_].draw(0,0);
 	updateShader_.end();
@@ -394,6 +465,7 @@ void ofApp::drawCascade(){
 	renderShader_.setUniform2f("screenRes", ofGetWidth(), ofGetHeight());
 	renderShader_.setUniform1f("pointSize", pointSize_);
 	renderShader_.setUniform1f("time", ofGetElapsedTimef());
+	renderShader_.setUniform1i("renderSquares", renderSquares_ ? 1 : 0);
 	particleMesh_.draw();
 	renderShader_.end();
 	glDisable(GL_PROGRAM_POINT_SIZE);

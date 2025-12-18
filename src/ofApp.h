@@ -4,6 +4,7 @@
 #include "ofxNDIFinder.h"
 #include "ofxNDIReceiver.h"
 #include "ofxNDIRecvStream.h"
+#include "ofxGui.h"
 
 class ofApp : public ofBaseApp{
 
@@ -70,9 +71,27 @@ class ofApp : public ofBaseApp{
 		float noiseStrength_ = 0.8f;
 		bool invertMask_ = false;
 		float pointSize_ = 5.0f;
+		float topBias_ = 0.0f;
+		float bounceDampen_ = 0.5f;
+		bool renderSquares_ = false;
 
 		ofRectangle maskDrawRect_;
 		float simDensity_ = 0.15f; // particles per pixel on width (lighter)
 		glm::ivec2 lastInitRes_{0,0};
+
+		// GUI
+		ofxPanel gui_;
+		bool showGui_ = true;
+		ofParameter<float> pGravity_;
+		ofParameter<float> pNoise_;
+		ofParameter<float> pThreshold_;
+		ofParameter<float> pPointSize_;
+		ofParameter<float> pSimDensity_;
+		ofParameter<float> pTopBias_;
+		ofParameter<float> pBounceDampen_;
+		ofParameter<bool> pCollide_;
+		ofParameter<bool> pInvertMask_;
+		ofParameter<bool> pShowMask_;
+		ofParameter<bool> pRenderSquares_;
 		
 };

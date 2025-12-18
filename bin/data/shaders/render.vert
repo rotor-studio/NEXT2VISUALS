@@ -3,6 +3,7 @@
 uniform sampler2D posTex;
 uniform float pointSize;
 uniform float time;
+uniform int renderSquares;
 
 in vec4 position;
 in vec2 texcoord;
