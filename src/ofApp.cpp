@@ -238,14 +238,14 @@ void ofApp::draw(){
 		outputFbo_.begin();
 		ofClear(0,0,0,255);
 		ofSetColor(255);
-		// draw trail upright for NDI
-		trailFbo_.getTexture().draw(0, 0, ofGetWidth(), ofGetHeight());
+		// draw trail flipped (match on-screen orientation)
+		trailFbo_.getTexture().draw(0, ofGetHeight(), ofGetWidth(), -ofGetHeight());
 		// draw fresh cascade on top (upright)
 		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 		drawCascade();
 		ofDisableBlendMode();
 		// draw mask with preview alpha
-		if(hasFrame_ && texture_.isAllocated()) {
+		if(showMask_ && hasFrame_ && texture_.isAllocated()) {
 			ofEnableBlendMode(OF_BLENDMODE_ADD);
 			ofSetColor(255, 255, 255, static_cast<int>(maskAlpha_ * 255));
 			if(maskDrawRect_.isEmpty()) {
