@@ -39,6 +39,7 @@ class ofApp : public ofBaseApp{
 		void setupCascade();
 		void rebuildCascade();
 		void ensureTrailFbo();
+		void ensureOutputFbo();
 		void initParticles();
 		void updateParticles(float dt);
 		void drawCascade();
@@ -85,6 +86,7 @@ class ofApp : public ofBaseApp{
 		float simDensity_ = 0.15f; // particles per pixel on width (lighter)
 		glm::ivec2 lastInitRes_{0,0};
 		ofFbo trailFbo_;
+		ofFbo outputFbo_;
 		// NDI output
 		ofxNDISender ndiSender_;
 		ofxNDISendVideo ndiVideo_;

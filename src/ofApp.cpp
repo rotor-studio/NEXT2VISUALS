@@ -174,9 +174,11 @@ void ofApp::update(){
 void ofApp::draw(){
 	ofBackground(0);
 
-	// draw trail/particles first
 	if(particlesReady_) {
 		ensureTrailFbo();
+		ensureOutputFbo();
+
+		// update trail FBO with cascade
 		trailFbo_.begin();
 		ofPushStyle();
 		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
@@ -188,18 +190,18 @@ void ofApp::draw(){
 		ofPopStyle();
 		trailFbo_.end();
 
+		// draw trail to screen (upright)
 		ofSetColor(255);
-		// FBO texture is upside-down in GL coords; flip on draw to screen
-		trailFbo_.getTexture().draw(0, ofGetHeight(), ofGetWidth(), -ofGetHeight());
+		trailFbo_.getTexture().draw(0, 0, ofGetWidth(), ofGetHeight());
 
-		// also draw fresh cascade on top so visibility is independent of mask
+		// draw fresh cascade on top so visibility is independent of mask
 		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 		ofSetColor(255);
 		drawCascade();
 		ofDisableBlendMode();
 	}
 
-	// draw mask with its own alpha on top
+	// draw mask with its own alpha on top for preview
 	if(hasFrame_ && texture_.isAllocated() && showMask_) {
 		ofEnableBlendMode(OF_BLENDMODE_ADD); // add mask so it doesn't dim cascade
 		ofSetColor(255, 255, 255, static_cast<int>(maskAlpha_ * 255));
@@ -230,10 +232,28 @@ void ofApp::draw(){
 		}
 	}
 
-	// send NDI output (without GUI/overlay) if ready
+	// compose and send NDI output independently (full mask alpha, no GUI)
 	if(ndiReady_ && sendNDI_) {
+		outputFbo_.begin();
+		ofClear(0,0,0,255);
+		ofSetColor(255);
+		trailFbo_.getTexture().draw(0, 0, ofGetWidth(), ofGetHeight());
+		// draw fresh cascade on top of trail for NDI as well
+		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
+		drawCascade();
+		ofDisableBlendMode();
+		// mask at full opacity if available
+		if(hasFrame_ && texture_.isAllocated()) {
+			ofSetColor(255);
+			if(maskDrawRect_.isEmpty()) {
+				texture_.draw(0, 0, ofGetWidth(), ofGetHeight());
+			} else {
+				texture_.draw(maskDrawRect_);
+			}
+		}
+		outputFbo_.end();
 		ofPixels sendPix;
-		ofGetGLRenderer()->saveFullViewport(sendPix);
+		outputFbo_.readToPixels(sendPix);
 		ndiVideo_.send(sendPix);
 	}
 
@@ -321,6 +341,7 @@ void ofApp::windowResized(int w, int h){
 	computeSimRes();
 	rebuildCascade();
 	ensureTrailFbo();
+	ensureOutputFbo();
 }
 
 //--------------------------------------------------------------
@@ -426,6 +447,30 @@ void ofApp::ensureTrailFbo(){
 	trailFbo_.begin();
 	ofClear(0,0,0,255);
 	trailFbo_.end();
+}
+
+//--------------------------------------------------------------
+void ofApp::ensureOutputFbo(){
+	if(outputFbo_.isAllocated() &&
+	   outputFbo_.getWidth() == ofGetWidth() &&
+	   outputFbo_.getHeight() == ofGetHeight()) {
+		return;
+	}
+	ofFbo::Settings s;
+	s.width = ofGetWidth();
+	s.height = ofGetHeight();
+	s.internalformat = GL_RGBA;
+	s.useDepth = false;
+	s.useStencil = false;
+	s.textureTarget = GL_TEXTURE_2D;
+	s.minFilter = GL_LINEAR;
+	s.maxFilter = GL_LINEAR;
+	s.wrapModeHorizontal = GL_CLAMP_TO_EDGE;
+	s.wrapModeVertical = GL_CLAMP_TO_EDGE;
+	outputFbo_.allocate(s);
+	outputFbo_.begin();
+	ofClear(0,0,0,255);
+	outputFbo_.end();
 }
 
 //--------------------------------------------------------------
