@@ -233,14 +233,12 @@ void ofApp::draw(){
 	}
 
 
-	// compose and send NDI output (cascade + trail + mask, no GUI)
+	// compose and send NDI output (cascade + optional mask, no GUI/trail)
 	if(ndiReady_ && sendNDI_) {
 		outputFbo_.begin();
 		ofClear(0,0,0,255);
 		ofSetColor(255);
-		// draw trail flipped (match on-screen orientation)
-		trailFbo_.getTexture().draw(0, ofGetHeight(), ofGetWidth(), -ofGetHeight());
-		// draw fresh cascade on top (upright)
+		// draw only fresh cascade
 		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 		drawCascade();
 		ofDisableBlendMode();
