@@ -190,9 +190,9 @@ void ofApp::draw(){
 		ofPopStyle();
 		trailFbo_.end();
 
-		// draw trail to screen (flip vertically because FBO coords)
+		// draw trail to screen (upright)
 		ofSetColor(255);
-		trailFbo_.getTexture().draw(0, ofGetHeight(), ofGetWidth(), -ofGetHeight());
+		trailFbo_.getTexture().draw(0, 0, ofGetWidth(), ofGetHeight());
 
 		// draw fresh cascade on top so visibility is independent of mask
 		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
@@ -237,20 +237,20 @@ void ofApp::draw(){
 		outputFbo_.begin();
 		ofClear(0,0,0,255);
 		ofSetColor(255);
-		// flip trail for correct orientation
-		trailFbo_.getTexture().draw(0, ofGetHeight(), ofGetWidth(), -ofGetHeight());
+		trailFbo_.getTexture().draw(0, 0, ofGetWidth(), ofGetHeight());
 		// draw fresh cascade on top of trail for NDI as well
 		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 		drawCascade();
 		ofDisableBlendMode();
-		// mask at full opacity if available
+		// mask with preview alpha
 		if(hasFrame_ && texture_.isAllocated()) {
-			ofSetColor(255);
+			ofSetColor(255, 255, 255, static_cast<int>(maskAlpha_ * 255));
 			if(maskDrawRect_.isEmpty()) {
 				texture_.draw(0, 0, ofGetWidth(), ofGetHeight());
 			} else {
 				texture_.draw(maskDrawRect_);
 			}
+			ofSetColor(255);
 		}
 		outputFbo_.end();
 		ofPixels sendPix;
