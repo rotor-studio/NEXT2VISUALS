@@ -197,7 +197,11 @@ void ofApp::draw(){
 		// draw fresh cascade on top so visibility is independent of mask
 		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 		ofSetColor(255);
+		ofPushMatrix();
+		ofTranslate(0, ofGetHeight());
+		ofScale(1.0f, -1.0f);
 		drawCascade();
+		ofPopMatrix();
 		ofDisableBlendMode();
 	}
 
@@ -240,7 +244,11 @@ void ofApp::draw(){
 		ofSetColor(255);
 		// draw only fresh cascade (no trail) to avoid double/mirrored output
 		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
+		ofPushMatrix();
+		ofTranslate(0, ofGetHeight());
+		ofScale(1.0f, -1.0f);
 		drawCascade();
+		ofPopMatrix();
 		ofDisableBlendMode();
 		// draw mask with preview alpha
 		if(showMask_ && hasFrame_ && texture_.isAllocated()) {
