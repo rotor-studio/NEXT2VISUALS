@@ -233,7 +233,7 @@ void ofApp::draw(){
 	}
 
 
-	// compose and send NDI output (cascade + optional mask, no GUI/trail)
+	// compose and send NDI output (only cascade, no GUI/trail/mask)
 	if(ndiReady_ && sendNDI_) {
 		outputFbo_.begin();
 		ofClear(0,0,0,255);
@@ -242,18 +242,6 @@ void ofApp::draw(){
 		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 		drawCascade();
 		ofDisableBlendMode();
-		// draw mask with preview alpha
-		if(showMask_ && hasFrame_ && texture_.isAllocated()) {
-			ofEnableBlendMode(OF_BLENDMODE_ADD);
-			ofSetColor(255, 255, 255, static_cast<int>(maskAlpha_ * 255));
-			if(maskDrawRect_.isEmpty()) {
-				texture_.draw(0, 0, ofGetWidth(), ofGetHeight());
-			} else {
-				texture_.draw(maskDrawRect_);
-			}
-			ofDisableBlendMode();
-			ofSetColor(255);
-		}
 		outputFbo_.end();
 		ofPixels sendPix;
 		outputFbo_.readToPixels(sendPix);
