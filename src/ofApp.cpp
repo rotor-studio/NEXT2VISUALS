@@ -245,6 +245,14 @@ void ofApp::draw(){
 		outputFbo_.end();
 		ofPixels sendPix;
 		outputFbo_.readToPixels(sendPix);
+		// force alpha to 255 to avoid dimming
+		if(sendPix.getNumChannels() == 4) {
+			auto *data = sendPix.getData();
+			const size_t total = sendPix.size();
+			for(size_t i = 3; i < total; i += 4) {
+				data[i] = 255;
+			}
+		}
 		ndiVideo_.send(sendPix);
 	}
 
