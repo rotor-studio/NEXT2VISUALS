@@ -238,9 +238,7 @@ void ofApp::draw(){
 		outputFbo_.begin();
 		ofClear(0,0,0,255);
 		ofSetColor(255);
-		// draw trail flipped (match on-screen orientation)
-		trailFbo_.getTexture().draw(0, ofGetHeight(), ofGetWidth(), -ofGetHeight());
-		// draw fresh cascade on top (upright)
+		// draw only fresh cascade (no trail) to avoid double/mirrored output
 		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 		drawCascade();
 		ofDisableBlendMode();
