@@ -238,9 +238,9 @@ void ofApp::draw(){
 		outputFbo_.begin();
 		ofClear(0,0,0,255);
 		ofSetColor(255);
-		// draw trail (flip like screen)
-		trailFbo_.getTexture().draw(0, ofGetHeight(), ofGetWidth(), -ofGetHeight());
-		// draw fresh cascade on top
+		// draw trail upright for NDI
+		trailFbo_.getTexture().draw(0, 0, ofGetWidth(), ofGetHeight());
+		// draw fresh cascade on top (upright)
 		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 		drawCascade();
 		ofDisableBlendMode();
