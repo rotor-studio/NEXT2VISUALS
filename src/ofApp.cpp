@@ -192,7 +192,7 @@ void ofApp::draw(){
 
 		// draw trail to screen (upright)
 		ofSetColor(255);
-		trailFbo_.getTexture().draw(0, 0, ofGetWidth(), ofGetHeight());
+		trailFbo_.getTexture().draw(0, ofGetHeight(), ofGetWidth(), -ofGetHeight());
 
 		// draw fresh cascade on top so visibility is independent of mask
 		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
@@ -237,7 +237,7 @@ void ofApp::draw(){
 		outputFbo_.begin();
 		ofClear(0,0,0,255);
 		ofSetColor(255);
-		trailFbo_.getTexture().draw(0, 0, ofGetWidth(), ofGetHeight());
+		trailFbo_.getTexture().draw(0, ofGetHeight(), ofGetWidth(), -ofGetHeight());
 		// draw fresh cascade on top of trail for NDI as well
 		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 		drawCascade();
