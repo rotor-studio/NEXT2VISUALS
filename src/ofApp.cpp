@@ -237,14 +237,13 @@ void ofApp::draw(){
 		outputFbo_.begin();
 		ofClear(0,0,0,255);
 		ofSetColor(255);
-		trailFbo_.getTexture().draw(0, ofGetHeight(), ofGetWidth(), -ofGetHeight());
-		// draw fresh cascade on top of trail for NDI as well
+		// draw cascade fresh (no trail) for a clean NDI feed
 		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 		drawCascade();
 		ofDisableBlendMode();
-		// mask with preview alpha
+		// mask at full opacity so it never hides cascade in NDI
 		if(hasFrame_ && texture_.isAllocated()) {
-			ofSetColor(255, 255, 255, static_cast<int>(maskAlpha_ * 255));
+			ofSetColor(255);
 			if(maskDrawRect_.isEmpty()) {
 				texture_.draw(0, 0, ofGetWidth(), ofGetHeight());
 			} else {
