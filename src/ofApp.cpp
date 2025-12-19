@@ -31,7 +31,7 @@ void ofApp::setup(){
 	pBounceDampen_.set("bounce dampen", bounceDampen_, 0.1f, 1.0f);
 	pShrinkStrength_.set("shrink strength", shrinkStrength_, 0.0f, 1.0f);
 	pMaskAlpha_.set("mask alpha", maskAlpha_, 0.0f, 1.0f);
-	pTrailFade_.set("trail fade", trailFade_, 0.0f, 0.5f);
+	pTrailFade_.set("trail fade", trailFade_, 0.0f, 1.5f);
 	pCollide_.set("collide mask", collide_);
 	pInvertMask_.set("invert mask", invertMask_);
 	pShowMask_.set("show mask", showMask_);
@@ -138,6 +138,7 @@ void ofApp::update(){
 			bounceDampen_ = pBounceDampen_;
 			shrinkStrength_ = pShrinkStrength_;
 			maskAlpha_ = pMaskAlpha_;
+			trailFade_ = pTrailFade_;
 			collide_ = pCollide_;
 			invertMask_ = pInvertMask_;
 			showMask_ = pShowMask_;
@@ -236,21 +237,32 @@ void ofApp::draw(){
 	// compose and send NDI output (only cascade, no GUI/trail/mask)
 	if(ndiReady_ && sendNDI_) {
 		outputFbo_.begin();
-		ofClear(0,0,0,255);
+		ofClear(0,0,0,0); // keep transparency
 		ofSetColor(255);
-		// draw only fresh cascade
+		// draw trail
 		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
+		trailFbo_.draw(0, 0, outputFbo_.getWidth(), outputFbo_.getHeight());
+		// draw fresh cascade on top
 		drawCascade();
 		ofDisableBlendMode();
 		outputFbo_.end();
 		ofPixels sendPix;
 		outputFbo_.readToPixels(sendPix);
-		// force alpha to 255 to avoid dimming
+		// flip for NDI (NDI expects top-left origin)
+		sendPix.mirror(true, false);
+		// un-premultiply colors and force alpha to 255 to avoid dimming on receivers
 		if(sendPix.getNumChannels() == 4) {
 			auto *data = sendPix.getData();
 			const size_t total = sendPix.size();
-			for(size_t i = 3; i < total; i += 4) {
-				data[i] = 255;
+			for(size_t i = 0; i < total; i += 4) {
+				unsigned char a = data[i + 3];
+				if(a > 0 && a < 255) {
+					float invA = 255.0f / float(a);
+					data[i + 0] = std::min(255.0f, data[i + 0] * invA);
+					data[i + 1] = std::min(255.0f, data[i + 1] * invA);
+					data[i + 2] = std::min(255.0f, data[i + 2] * invA);
+				}
+				data[i + 3] = 255;
 			}
 		}
 		ndiVideo_.send(sendPix);
