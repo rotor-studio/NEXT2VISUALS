@@ -4,6 +4,8 @@
 #include "ofxNDIFinder.h"
 #include "ofxNDIReceiver.h"
 #include "ofxNDIRecvStream.h"
+#include "ofxNDISender.h"
+#include "ofxNDISendStream.h"
 #include "ofxGui.h"
 
 class ofApp : public ofBaseApp{
@@ -83,6 +85,12 @@ class ofApp : public ofBaseApp{
 		float simDensity_ = 0.15f; // particles per pixel on width (lighter)
 		glm::ivec2 lastInitRes_{0,0};
 		ofFbo trailFbo_;
+		// NDI output
+		ofxNDISender ndiSender_;
+		ofxNDISendVideo ndiVideo_;
+		bool ndiReady_ = false;
+		bool sendNDI_ = true;
+		std::string ndiName_ = "NEXT2VISUALS Output";
 
 		// GUI
 		ofxPanel gui_;

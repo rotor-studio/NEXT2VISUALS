@@ -14,6 +14,12 @@ void ofApp::setup(){
 	finder_.watchSources();
 	ofLogNotice("NEXT2VISUALS") << "data path: " << ofToDataPath("", true);
 	setupCascade();
+	if(ndiSender_.setup(ndiName_)) {
+		ndiVideo_.setup(ndiSender_);
+		ndiVideo_.setAsync(true);
+		ndiReady_ = true;
+		ofLogNotice("NEXT2VISUALS") << "NDI output ready: " << ndiName_;
+	}
 
 	gui_.setup("NEXT2VISUALS");
 	pGravity_.set("gravity", gravity_, 0.1f, 8.0f);
@@ -222,6 +228,13 @@ void ofApp::draw(){
 			const auto &src = sources[i];
 			ofDrawBitmapStringHighlight(ofToString(i+1) + ": " + src.p_ndi_name, 20, 140 + i * 20);
 		}
+	}
+
+	// send NDI output (without GUI/overlay) if ready
+	if(ndiReady_ && sendNDI_) {
+		ofPixels sendPix;
+		ofGetGLRenderer()->saveFullViewport(sendPix);
+		ndiVideo_.send(sendPix);
 	}
 
 	if(showGui_) {
