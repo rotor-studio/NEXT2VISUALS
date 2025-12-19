@@ -232,23 +232,28 @@ void ofApp::draw(){
 		}
 	}
 
-	// compose and send NDI output independently (full mask alpha, no GUI)
+
+	// compose and send NDI output (cascade + trail + mask, no GUI)
 	if(ndiReady_ && sendNDI_) {
 		outputFbo_.begin();
 		ofClear(0,0,0,255);
 		ofSetColor(255);
-		// draw cascade fresh (no trail) for a clean NDI feed
+		// draw trail (flip like screen)
+		trailFbo_.getTexture().draw(0, ofGetHeight(), ofGetWidth(), -ofGetHeight());
+		// draw fresh cascade on top
 		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 		drawCascade();
 		ofDisableBlendMode();
-		// mask at full opacity so it never hides cascade in NDI
+		// draw mask with preview alpha
 		if(hasFrame_ && texture_.isAllocated()) {
-			ofSetColor(255);
+			ofEnableBlendMode(OF_BLENDMODE_ADD);
+			ofSetColor(255, 255, 255, static_cast<int>(maskAlpha_ * 255));
 			if(maskDrawRect_.isEmpty()) {
 				texture_.draw(0, 0, ofGetWidth(), ofGetHeight());
 			} else {
 				texture_.draw(maskDrawRect_);
 			}
+			ofDisableBlendMode();
 			ofSetColor(255);
 		}
 		outputFbo_.end();
