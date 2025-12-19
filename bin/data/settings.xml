@@ -8,4 +8,9 @@
 	<collide_mask>1</collide_mask>
 	<invert_mask>0</invert_mask>
 	<show_mask>0</show_mask>
+	<top_bias>0</top_bias>
+	<bounce_dampen>0.5</bounce_dampen>
+	<shrink_strength>0.5</shrink_strength>
+	<mask_alpha>1</mask_alpha>
+	<render_squares>0</render_squares>
 </NEXT2VISUALS>

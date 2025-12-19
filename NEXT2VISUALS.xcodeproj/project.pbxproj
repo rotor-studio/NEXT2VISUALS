@@ -3,7 +3,68 @@
 	"classes": {},
 	"objectVersion": "54",
 	"objects": {
-		"04C3035B-16C4-4626-A929-C89E6637898B": {
+		"002019E1-2002-4CED-A63D-A2195518DA11": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxButton.cpp",
+			"path": "../../../addons/ofxGui/src/ofxButton.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"02333872-AD97-4226-8630-8507026EF273": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxGui.h",
+			"path": "../../../addons/ofxGui/src/ofxGui.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"031A4D7D-01F9-4DBA-B22F-2511F75D4A8F": {
+			"children": [
+				"93351AA6-C704-4F9F-BC10-FB2351851BF7"
+			],
+			"isa": "PBXGroup",
+			"name": "ofxGui",
+			"path": "../../../addons/ofxGui",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"05185731-3275-4734-BF43-2EA1097A6837": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.Send.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Send.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"0681F67F-8328-4001-BDDB-4CDAACCEB24C": {
+			"fileRef": "A0B17F4A-6CD6-4FBF-9A3F-578EF06822D6",
+			"isa": "PBXBuildFile"
+		},
+		"06EF0E50-A039-47CE-B6AC-BD0E26E62081": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxLabel.cpp",
+			"path": "../../../addons/ofxGui/src/ofxLabel.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"0A6DD0B7-7124-4C97-87B5-777B474471C0": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIFinder.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDIFinder.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"0E80873A-BA81-4D94-A5C0-E7682B543DCB": {
+			"children": [
+				"B280F0CE-1F18-4381-90EE-A55E6CA0C355"
+			],
+			"isa": "PBXGroup",
+			"name": "osx",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"0F43C140-77FA-4AAA-97C1-D9F9EBD11807": {
 			"explicitFileType": "sourcecode.cpp.cpp",
 			"fileEncoding": "4",
 			"isa": "PBXFileReference",
@@ -11,37 +72,49 @@
 			"path": "../../../addons/ofxNDI/src/ofxNDISender.cpp",
 			"sourceTree": "SOURCE_ROOT"
 		},
-		"082A867D-6033-4D8D-B092-443319472A97": {
-			"fileRef": "97979180-2C05-4B59-A7B5-1334F3BB3534",
-			"isa": "PBXBuildFile"
-		},
-		"0A350E0E-5A2B-4E00-90CA-618FE671492B": {
-			"explicitFileType": "sourcecode.c.h",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "ofxNDIRecvStream.h",
-			"path": "../../../addons/ofxNDI/src/ofxNDIRecvStream.h",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"0DC1BA5E-9C4D-4313-9647-5BE62FA13337": {
-			"fileRef": "3270BA31-7A06-428B-A0A6-40EC2A8839A5",
-			"isa": "PBXBuildFile"
-		},
-		"0E50C3F3-71C3-4F7C-8964-E6CB25138553": {
-			"explicitFileType": "sourcecode.c.h",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "ofxNDIReceiver.h",
-			"path": "../../../addons/ofxNDI/src/ofxNDIReceiver.h",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"17920274-FFF1-497B-AB3F-88978331706F": {
+		"0FB64615-C756-4472-9300-9FE5E3502BA2": {
 			"explicitFileType": "sourcecode.cpp.cpp",
 			"fileEncoding": "4",
 			"isa": "PBXFileReference",
-			"name": "ofxNDISendStream.cpp",
-			"path": "../../../addons/ofxNDI/src/ofxNDISendStream.cpp",
+			"name": "ofxNDIPTZ.cpp",
+			"path": "../../../addons/ofxNDI/src/ofxNDIPTZ.cpp",
 			"sourceTree": "SOURCE_ROOT"
+		},
+		"10319E43-2F0E-429D-88AE-F3AD0F834CFA": {
+			"fileRef": "F9FF93E0-6581-4ED2-B900-BE527B722482",
+			"isa": "PBXBuildFile"
+		},
+		"115FF9D9-C08E-4D18-957A-313901884A5C": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxToggle.h",
+			"path": "../../../addons/ofxGui/src/ofxToggle.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"13737201-731C-4B4C-B9CA-B9765BD8A062": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.DynamicLoad.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.DynamicLoad.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"138549AE-99CE-44EF-8072-FD32CC8BCE98": {
+			"fileRef": "DA8CB23D-4702-4788-A826-87B3CC8F34A3",
+			"isa": "PBXBuildFile"
+		},
+		"14972B02-677C-4887-8FAE-3E89238668E9": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.deprecated.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.deprecated.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"16CD7F8A-951D-4710-9794-00E1EC941E4B": {
+			"fileRef": "3393F69A-47DB-4452-ADAE-1CEEDE032008",
+			"isa": "PBXBuildFile"
 		},
 		"191CD6FA2847E21E0085CBB6": {
 			"fileEncoding": "4",
@@ -70,193 +143,23 @@
 			"shellScript": "\"$OF_PATH/scripts/osx/xcode_project.sh\"\n",
 			"showEnvVarsInLog": "0"
 		},
-		"26CCCD7A-5F5A-4932-A4F9-707ECB855751": {
+		"2028E103-7EE8-41A5-A1A7-62054D827DEB": {
 			"explicitFileType": "sourcecode.c.h",
 			"fileEncoding": "4",
 			"isa": "PBXFileReference",
-			"name": "Processing.NDI.Routing.h",
-			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Routing.h",
+			"name": "ofxButton.h",
+			"path": "../../../addons/ofxGui/src/ofxButton.h",
 			"sourceTree": "SOURCE_ROOT"
 		},
-		"2733152A-0A58-47FA-AFF0-F6E9A2381B09": {
-			"explicitFileType": "sourcecode.cpp.cpp",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "ofxNDIPTZ.cpp",
-			"path": "../../../addons/ofxNDI/src/ofxNDIPTZ.cpp",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"308379E2-A99B-4EE8-8CE4-2D1F4AE973E3": {
-			"isa": "PBXFileReference",
-			"lastKnownFileType": "compiled.mach-o.dylib",
-			"name": "libndi.4.dylib",
-			"path": "../../../addons/ofxNDI/libs/NDI/lib/osx/x64/libndi.4.dylib",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"3266ED81-2F10-4944-BC58-6D61452DAECE": {
-			"fileRef": "E84A9FEB-1893-4F8F-9667-C410B5448681",
-			"isa": "PBXBuildFile"
-		},
-		"3270BA31-7A06-428B-A0A6-40EC2A8839A5": {
-			"explicitFileType": "sourcecode.cpp.cpp",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "ofxNDIFrame.cpp",
-			"path": "../../../addons/ofxNDI/src/ofxNDIFrame.cpp",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"32FB365F-DE32-4719-87D3-F26168EA3FFB": {
+		"21C07CF4-F811-4AF1-9436-49EE591ED3DD": {
 			"explicitFileType": "sourcecode.c.h",
 			"fileEncoding": "4",
 			"isa": "PBXFileReference",
-			"name": "ofxNDISendStream.h",
-			"path": "../../../addons/ofxNDI/src/ofxNDISendStream.h",
+			"name": "ofxNDIReceiver.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDIReceiver.h",
 			"sourceTree": "SOURCE_ROOT"
 		},
-		"38F89B40-DBF5-48CC-92DB-F81148EBD8C3": {
-			"fileRef": "A0D79F7F-F0A6-4C2E-8E80-BC64E9F93CF4",
-			"isa": "PBXBuildFile"
-		},
-		"3CEB9758-EEA9-41AA-9AD4-5F6A21A23066": {
-			"explicitFileType": "sourcecode.c.h",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "Processing.NDI.Send.h",
-			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Send.h",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"3DB14430-B8AE-458A-87C7-5E81AEC964E3": {
-			"fileRef": "308379E2-A99B-4EE8-8CE4-2D1F4AE973E3",
-			"isa": "PBXBuildFile",
-			"settings": {
-				"ATTRIBUTES": [
-					"CodeSignOnCopy"
-				]
-			}
-		},
-		"3F6F752E-565D-4105-B4F9-2C3D62BC91DA": {
-			"explicitFileType": "sourcecode.c.h",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "Processing.NDI.utilities.h",
-			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.utilities.h",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"3FB79409-D9A0-4FE3-AC16-607B50A7919C": {
-			"explicitFileType": "sourcecode.c.h",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "ofxNDIRouter.h",
-			"path": "../../../addons/ofxNDI/src/ofxNDIRouter.h",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"4E00B0A9-7737-422B-8E69-449966C50424": {
-			"fileRef": "A1AFF6FF-F189-4675-ACF6-43B1E050632D",
-			"isa": "PBXBuildFile"
-		},
-		"4E9FEF05-23EB-4A88-B727-63E40DA00386": {
-			"children": [
-				"F4C8300E-589A-41C7-A78E-6311381A2716",
-				"DEE69B1C-0A98-4A2B-AC41-13A717B87FF6"
-			],
-			"isa": "PBXGroup",
-			"name": "ofxNDI",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"4F0EA262-45B2-4D98-A5B5-916FD90C5D9F": {
-			"children": [
-				"A1AFF6FF-F189-4675-ACF6-43B1E050632D",
-				"E96B9426-9C37-40E8-8B74-6D211087A2E7",
-				"85884A05-6B3D-4B70-92D5-5D41BAEA6576",
-				"DF925639-B05D-46CD-991B-AC4416CD22A0"
-			],
-			"isa": "PBXGroup",
-			"name": "utils",
-			"path": "../../../addons/ofxNDI/src/utils",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"524D4CC3-ABB8-4426-B0F9-231FF184551A": {
-			"explicitFileType": "sourcecode.c.h",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "Processing.NDI.Recv.h",
-			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Recv.h",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"5ED17057-27F3-4F9D-8018-ACAE219E8213": {
-			"explicitFileType": "sourcecode.c.h",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "ofxNDISender.h",
-			"path": "../../../addons/ofxNDI/src/ofxNDISender.h",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"61A07477-83D3-4113-9E54-A512A60D6F01": {
-			"fileRef": "308379E2-A99B-4EE8-8CE4-2D1F4AE973E3",
-			"isa": "PBXBuildFile",
-			"settings": {
-				"ATTRIBUTES": [
-					"CodeSignOnCopy"
-				]
-			}
-		},
-		"69BDBA16-FB15-4BE6-AA4B-D4BF4B5C049F": {
-			"explicitFileType": "sourcecode.c.h",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "ofxNDIFinder.h",
-			"path": "../../../addons/ofxNDI/src/ofxNDIFinder.h",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"6BCA9942-353A-4582-A0FA-571E3D1A82B3": {
-			"explicitFileType": "sourcecode.c.h",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "Processing.NDI.FrameSync.h",
-			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.FrameSync.h",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"6E6707E3-880F-4EF5-8EEE-7E61912B1903": {
-			"explicitFileType": "sourcecode.cpp.cpp",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "ofxNDIReceiver.cpp",
-			"path": "../../../addons/ofxNDI/src/ofxNDIReceiver.cpp",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"6F4CBAD7-FF8A-4892-A97B-29DE5943415F": {
-			"children": [
-				"C92246C5-4D1A-4558-8E9D-3926CBFB88F8"
-			],
-			"isa": "PBXGroup",
-			"name": "lib",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"71C1CA73-5FAC-483D-BDC6-1AB1D56CED94": {
-			"explicitFileType": "sourcecode.c.h",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "Processing.NDI.Lib.h",
-			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Lib.h",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"7E4A3951-85B8-4282-BBB9-81EC4FABC5A9": {
-			"children": [
-				"308379E2-A99B-4EE8-8CE4-2D1F4AE973E3"
-			],
-			"isa": "PBXGroup",
-			"name": "x64",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"7FC39BF9-710A-4BEC-8834-6C18D1D2FB98": {
-			"explicitFileType": "sourcecode.c.h",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "ofxNDI.h",
-			"path": "../../../addons/ofxNDI/src/ofxNDI.h",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"85884A05-6B3D-4B70-92D5-5D41BAEA6576": {
+		"227F24DA-B422-4AB4-8D7D-B18586E25A65": {
 			"explicitFileType": "sourcecode.cpp.cpp",
 			"fileEncoding": "4",
 			"isa": "PBXFileReference",
@@ -264,93 +167,23 @@
 			"path": "../../../addons/ofxNDI/src/utils/ofxNDIVideoGrabber.cpp",
 			"sourceTree": "SOURCE_ROOT"
 		},
-		"8821FB0C-7C18-45D5-8826-D37E64DFF37A": {
-			"explicitFileType": "sourcecode.c.h",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "Processing.NDI.Recv.ex.h",
-			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Recv.ex.h",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"89784D56-242B-4925-B496-13B210E308F3": {
-			"explicitFileType": "sourcecode.cpp.cpp",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "ofxNDIRecorder.cpp",
-			"path": "../../../addons/ofxNDI/src/ofxNDIRecorder.cpp",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"9301CB2E-EDAC-404E-858D-E05674819FCB": {
-			"children": [
-				"6F4CBAD7-FF8A-4892-A97B-29DE5943415F",
-				"95CED342-1153-432D-A6CD-02A428F3C555"
-			],
-			"isa": "PBXGroup",
-			"name": "NDI",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"93A392B5-5FF3-43BE-AF61-F3CE2C16497E": {
-			"explicitFileType": "sourcecode.c.h",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "Processing.NDI.Find.h",
-			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Find.h",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"95CED342-1153-432D-A6CD-02A428F3C555": {
-			"children": [
-				"AA605E65-97FC-46E9-9409-F1567034ED05",
-				"93A392B5-5FF3-43BE-AF61-F3CE2C16497E",
-				"6BCA9942-353A-4582-A0FA-571E3D1A82B3",
-				"C4790DA7-891F-48D1-A8EF-18DAF190A0FA",
-				"71C1CA73-5FAC-483D-BDC6-1AB1D56CED94",
-				"8821FB0C-7C18-45D5-8826-D37E64DFF37A",
-				"524D4CC3-ABB8-4426-B0F9-231FF184551A",
-				"26CCCD7A-5F5A-4932-A4F9-707ECB855751",
-				"3CEB9758-EEA9-41AA-9AD4-5F6A21A23066",
-				"9A2F6912-5315-4FD2-B189-68FEBA2EEC25",
-				"E3CFF4F7-92B8-42C7-8093-45838A491A75",
-				"FF23CBD4-E722-4EA7-8E91-302C74D570E8",
-				"3F6F752E-565D-4105-B4F9-2C3D62BC91DA"
-			],
-			"isa": "PBXGroup",
-			"name": "include",
-			"path": "../../../addons/ofxNDI/libs/NDI/include",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"96021507-0E6D-4D3F-8C5E-8471D3826F72": {
-			"fileRef": "6E6707E3-880F-4EF5-8EEE-7E61912B1903",
+		"28857A7E-0B8D-4516-8ED6-2D927DD8269F": {
+			"fileRef": "F69C463B-32EC-40A6-B1FC-ADE81DA9DB15",
 			"isa": "PBXBuildFile"
 		},
-		"9690481B-A796-4780-9A97-A7FB380DC4C6": {
+		"326B86CE-0FE7-4685-BCBE-FC0B45D0AEC7": {
 			"explicitFileType": "sourcecode.c.h",
 			"fileEncoding": "4",
 			"isa": "PBXFileReference",
-			"name": "ofxNDIPTZ.h",
-			"path": "../../../addons/ofxNDI/src/ofxNDIPTZ.h",
+			"name": "ofxColorPicker.h",
+			"path": "../../../addons/ofxGui/src/ofxColorPicker.h",
 			"sourceTree": "SOURCE_ROOT"
 		},
-		"97979180-2C05-4B59-A7B5-1334F3BB3534": {
-			"explicitFileType": "sourcecode.cpp.cpp",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "ofxNDIRouter.cpp",
-			"path": "../../../addons/ofxNDI/src/ofxNDIRouter.cpp",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"9A2F6912-5315-4FD2-B189-68FEBA2EEC25": {
-			"explicitFileType": "sourcecode.c.h",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "Processing.NDI.compat.h",
-			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.compat.h",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"9FA06931-25E0-4B5C-8998-1EFD073BD45B": {
-			"fileRef": "04C3035B-16C4-4626-A929-C89E6637898B",
+		"33369724-604A-4DDB-AD05-D69F18A62AFE": {
+			"fileRef": "F098475D-A3CF-4136-A6C6-B726A9B92301",
 			"isa": "PBXBuildFile"
 		},
-		"A0D79F7F-F0A6-4C2E-8E80-BC64E9F93CF4": {
+		"3393F69A-47DB-4452-ADAE-1CEEDE032008": {
 			"explicitFileType": "sourcecode.cpp.cpp",
 			"fileEncoding": "4",
 			"isa": "PBXFileReference",
@@ -358,101 +191,446 @@
 			"path": "../../../addons/ofxNDI/src/ofxNDIFinder.cpp",
 			"sourceTree": "SOURCE_ROOT"
 		},
-		"A1AFF6FF-F189-4675-ACF6-43B1E050632D": {
+		"3D2B9B87-61F5-4A88-B55B-80FFD7CF5F51": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDISendStream.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDISendStream.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"3D4417F5-24F5-442E-91C0-9F159FE449E2": {
+			"fileRef": "D13973C6-7EE5-4392-8EE7-121F9FBA82BA",
+			"isa": "PBXBuildFile"
+		},
+		"43250C12-CB8D-4EFC-B02A-0F403399E8EC": {
+			"fileRef": "E8A64CF6-4AD3-4C78-890E-C41805F2BA44",
+			"isa": "PBXBuildFile",
+			"settings": {
+				"ATTRIBUTES": [
+					"CodeSignOnCopy"
+				]
+			}
+		},
+		"43374D8C-9782-4C61-9834-78201B4BBCCC": {
+			"fileRef": "EFE44C9F-F955-4B36-B393-A272F847E48A",
+			"isa": "PBXBuildFile"
+		},
+		"4486DE41-F00C-4E1A-B35B-25C87EE08DD0": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxPanel.h",
+			"path": "../../../addons/ofxGui/src/ofxPanel.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"45266EAE-3C90-4FF8-9957-51DDE13B129A": {
+			"fileRef": "4E365753-EC40-424B-9B68-99FDE2705DFB",
+			"isa": "PBXBuildFile"
+		},
+		"45EB5DDE-A38C-487E-836E-911B379EEB86": {
+			"children": [
+				"F69C463B-32EC-40A6-B1FC-ADE81DA9DB15",
+				"90E391A7-FE1C-43AD-BD5B-886BDBA352CF",
+				"227F24DA-B422-4AB4-8D7D-B18586E25A65",
+				"DD10D8AD-EE2A-4561-A4D8-8746C6A44867"
+			],
+			"isa": "PBXGroup",
+			"name": "utils",
+			"path": "../../../addons/ofxNDI/src/utils",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"4A02A702-5322-483D-B648-30E0015C04A4": {
+			"fileRef": "227F24DA-B422-4AB4-8D7D-B18586E25A65",
+			"isa": "PBXBuildFile"
+		},
+		"4BD7B07B-E92E-42B4-AB0E-D087503A6FC6": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIRecvStream.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDIRecvStream.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"4E365753-EC40-424B-9B68-99FDE2705DFB": {
 			"explicitFileType": "sourcecode.cpp.cpp",
 			"fileEncoding": "4",
 			"isa": "PBXFileReference",
-			"name": "ofxNDIVideoCaster.cpp",
-			"path": "../../../addons/ofxNDI/src/utils/ofxNDIVideoCaster.cpp",
+			"name": "ofxInputField.cpp",
+			"path": "../../../addons/ofxGui/src/ofxInputField.cpp",
 			"sourceTree": "SOURCE_ROOT"
 		},
-		"A575FDBF-FBE0-4CF6-B043-187EF85DEB32": {
+		"50604151-B1FA-4EE5-AF50-6FDA0F254E22": {
+			"fileRef": "8832C525-17E3-4F07-A81F-E40960FD7815",
+			"isa": "PBXBuildFile"
+		},
+		"529743CD-D530-4D0D-8DFF-AD7EAEE974B1": {
+			"fileRef": "808AC508-06B1-4283-A17C-788084C7D17C",
+			"isa": "PBXBuildFile"
+		},
+		"5CBBD041-C780-4E12-B855-15606773CCBF": {
+			"fileRef": "0FB64615-C756-4472-9300-9FE5E3502BA2",
+			"isa": "PBXBuildFile"
+		},
+		"5DCD53EE-DD91-412F-BF3C-830465D1A088": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.Recv.ex.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Recv.ex.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"6020A496-831B-4EB3-AF35-92724F4EA44D": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIFrame.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDIFrame.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"6B375548-47AE-4388-8A6B-98E516A3FC73": {
 			"children": [
-				"F11554CD-EBD8-480E-8D24-EEA0F45A912E"
+				"AC3E28E5-26F8-40ED-B716-2EC3980DBD53"
 			],
 			"isa": "PBXGroup",
 			"name": "utils",
 			"path": "../../../addons/ofxNDI/libs/utils",
 			"sourceTree": "SOURCE_ROOT"
 		},
-		"A7525109-92A4-4688-9808-F5E6548B8369": {
-			"fileRef": "17920274-FFF1-497B-AB3F-88978331706F",
-			"isa": "PBXBuildFile"
+		"6D0D389B-60E9-4C78-AE85-1EE089C447EB": {
+			"children": [
+				"B24BEA36-DD27-49AB-99BD-6C4EACD63B9F",
+				"6B375548-47AE-4388-8A6B-98E516A3FC73"
+			],
+			"isa": "PBXGroup",
+			"name": "libs",
+			"sourceTree": "SOURCE_ROOT"
 		},
-		"AA605E65-97FC-46E9-9409-F1567034ED05": {
+		"7244B7F4-B3BF-476E-AC24-AC64D5572126": {
 			"explicitFileType": "sourcecode.c.h",
 			"fileEncoding": "4",
 			"isa": "PBXFileReference",
-			"name": "Processing.NDI.DynamicLoad.h",
-			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.DynamicLoad.h",
+			"name": "ofxNDIRecorder.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDIRecorder.h",
 			"sourceTree": "SOURCE_ROOT"
 		},
-		"B70A1691-2043-4D11-9463-54DD7AA6E266": {
-			"fileRef": "89784D56-242B-4925-B496-13B210E308F3",
+		"808AC508-06B1-4283-A17C-788084C7D17C": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIFrame.cpp",
+			"path": "../../../addons/ofxNDI/src/ofxNDIFrame.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"82B2B00E-79BA-4FD7-9835-29B033F5B140": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxSlider.cpp",
+			"path": "../../../addons/ofxGui/src/ofxSlider.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"834C126A-8562-43E3-8BF1-469572DA8AA2": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxSlider.h",
+			"path": "../../../addons/ofxGui/src/ofxSlider.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"84D05D49-749A-4385-8571-9D97EFE6FA32": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.utilities.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.utilities.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"85D794B9-22E5-4367-98A1-6D882887FC4B": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxLabel.h",
+			"path": "../../../addons/ofxGui/src/ofxLabel.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"86994248-F592-423C-8E1D-E8CA1ABFE03B": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.Recv.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Recv.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"8832C525-17E3-4F07-A81F-E40960FD7815": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxGuiGroup.cpp",
+			"path": "../../../addons/ofxGui/src/ofxGuiGroup.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"8BBB9F77-8B07-4CFA-83E2-37D71AC45ADC": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDISendStream.cpp",
+			"path": "../../../addons/ofxNDI/src/ofxNDISendStream.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"8C556B11-D63B-4196-973E-F5C521FAAB10": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.FrameSync.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.FrameSync.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"90E391A7-FE1C-43AD-BD5B-886BDBA352CF": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIVideoCaster.h",
+			"path": "../../../addons/ofxNDI/src/utils/ofxNDIVideoCaster.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"93351AA6-C704-4F9F-BC10-FB2351851BF7": {
+			"children": [
+				"EFE44C9F-F955-4B36-B393-A272F847E48A",
+				"C25E7584-94C7-4617-ADFD-651C5CE93E4A",
+				"002019E1-2002-4CED-A63D-A2195518DA11",
+				"2028E103-7EE8-41A5-A1A7-62054D827DEB",
+				"CAE4D5CC-34F1-4BA4-B26D-F9E98F8A9BF7",
+				"326B86CE-0FE7-4685-BCBE-FC0B45D0AEC7",
+				"02333872-AD97-4226-8630-8507026EF273",
+				"8832C525-17E3-4F07-A81F-E40960FD7815",
+				"F467C164-18EF-4076-A5C2-6A5CBB15D62E",
+				"AD9D02DB-015F-4837-97CF-C56F1014030C",
+				"4E365753-EC40-424B-9B68-99FDE2705DFB",
+				"E0D78C0A-A1FE-4A57-887F-68776F9F3585",
+				"06EF0E50-A039-47CE-B6AC-BD0E26E62081",
+				"85D794B9-22E5-4367-98A1-6D882887FC4B",
+				"F21D09D3-0896-40FB-9472-DE333AB35B89",
+				"4486DE41-F00C-4E1A-B35B-25C87EE08DD0",
+				"82B2B00E-79BA-4FD7-9835-29B033F5B140",
+				"834C126A-8562-43E3-8BF1-469572DA8AA2",
+				"A0B17F4A-6CD6-4FBF-9A3F-578EF06822D6",
+				"B78DD029-CFAC-4257-90B1-2DF6B43EFD5E",
+				"F098475D-A3CF-4136-A6C6-B726A9B92301",
+				"115FF9D9-C08E-4D18-957A-313901884A5C"
+			],
+			"isa": "PBXGroup",
+			"name": "src",
+			"path": "../../../addons/ofxGui/src",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"94155BD5-C4E4-4A9E-922A-5AF6FAD6FD84": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDI.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDI.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"9A76D15C-F656-4612-A8B3-363207A2F820": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.structs.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.structs.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"A0B17F4A-6CD6-4FBF-9A3F-578EF06822D6": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxSliderGroup.cpp",
+			"path": "../../../addons/ofxGui/src/ofxSliderGroup.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"A361A7F7-3C5C-4F1D-A8DA-F423AB9C2533": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.Find.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Find.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"A7DC6FDE-0AE9-4EE1-9E85-0A7AE68BC7C8": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIRouter.cpp",
+			"path": "../../../addons/ofxNDI/src/ofxNDIRouter.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"AC3E28E5-26F8-40ED-B716-2EC3980DBD53": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "DoubleBuffer.h",
+			"path": "../../../addons/ofxNDI/libs/utils/DoubleBuffer.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"AD9D02DB-015F-4837-97CF-C56F1014030C": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxGuiUtils.h",
+			"path": "../../../addons/ofxGui/src/ofxGuiUtils.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"AE1ACE12-7977-4A8B-860F-E1B322427E9D": {
+			"fileRef": "A7DC6FDE-0AE9-4EE1-9E85-0A7AE68BC7C8",
+			"isa": "PBXBuildFile"
+		},
+		"AF56BA76-C519-4C83-BB2A-8752C07660B0": {
+			"fileRef": "82B2B00E-79BA-4FD7-9835-29B033F5B140",
+			"isa": "PBXBuildFile"
+		},
+		"B24BEA36-DD27-49AB-99BD-6C4EACD63B9F": {
+			"children": [
+				"FEB12D43-DB8D-4B68-AB50-90EB4921C55B",
+				"D6EDB2EA-911D-4152-8534-FF6CBC65B990"
+			],
+			"isa": "PBXGroup",
+			"name": "NDI",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"B280F0CE-1F18-4381-90EE-A55E6CA0C355": {
+			"children": [
+				"E8A64CF6-4AD3-4C78-890E-C41805F2BA44"
+			],
+			"isa": "PBXGroup",
+			"name": "x64",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"B5984C62-52FA-40E3-9491-56B342C6242E": {
+			"fileRef": "8BBB9F77-8B07-4CFA-83E2-37D71AC45ADC",
+			"isa": "PBXBuildFile"
+		},
+		"B78DD029-CFAC-4257-90B1-2DF6B43EFD5E": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxSliderGroup.h",
+			"path": "../../../addons/ofxGui/src/ofxSliderGroup.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"B89A8636-B6C2-4933-8130-09470A758F67": {
+			"children": [
+				"6D0D389B-60E9-4C78-AE85-1EE089C447EB",
+				"E97FAADE-8659-410A-93F9-101C7B0C52C2"
+			],
+			"isa": "PBXGroup",
+			"name": "ofxNDI",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"B8A0BA01-4E26-4C28-9C40-3A9ACC39E431": {
+			"fileRef": "F21D09D3-0896-40FB-9472-DE333AB35B89",
 			"isa": "PBXBuildFile"
 		},
 		"BB4B014C10F69532006C3DED": {
 			"children": [
-				"4E9FEF05-23EB-4A88-B727-63E40DA00386"
+				"031A4D7D-01F9-4DBA-B22F-2511F75D4A8F",
+				"B89A8636-B6C2-4933-8130-09470A758F67"
 			],
 			"isa": "PBXGroup",
 			"name": "addons",
 			"path": "../../../addons",
 			"sourceTree": "<group>"
 		},
-		"C4790DA7-891F-48D1-A8EF-18DAF190A0FA": {
+		"BD6BE6B1-0DB6-4B91-A7AE-BEFDCBCCEE4B": {
 			"explicitFileType": "sourcecode.c.h",
 			"fileEncoding": "4",
 			"isa": "PBXFileReference",
-			"name": "Processing.NDI.Lib.cplusplus.h",
-			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Lib.cplusplus.h",
+			"name": "ofxNDISender.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDISender.h",
 			"sourceTree": "SOURCE_ROOT"
 		},
-		"C92246C5-4D1A-4558-8E9D-3926CBFB88F8": {
-			"children": [
-				"7E4A3951-85B8-4282-BBB9-81EC4FABC5A9"
-			],
-			"isa": "PBXGroup",
-			"name": "osx",
+		"C25E7584-94C7-4617-ADFD-651C5CE93E4A": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBaseGui.h",
+			"path": "../../../addons/ofxGui/src/ofxBaseGui.h",
 			"sourceTree": "SOURCE_ROOT"
 		},
-		"CB31B3D0-BE64-4D80-BF57-53C1E3B0ABA2": {
-			"fileRef": "85884A05-6B3D-4B70-92D5-5D41BAEA6576",
+		"C9DD796F-0D8E-4843-93CE-30486300A564": {
+			"fileRef": "002019E1-2002-4CED-A63D-A2195518DA11",
 			"isa": "PBXBuildFile"
 		},
-		"D46BE89B-2400-4C1E-BFBF-23CBB1468E79": {
-			"fileRef": "2733152A-0A58-47FA-AFF0-F6E9A2381B09",
-			"isa": "PBXBuildFile"
-		},
-		"DEE69B1C-0A98-4A2B-AC41-13A717B87FF6": {
-			"children": [
-				"7FC39BF9-710A-4BEC-8834-6C18D1D2FB98",
-				"A0D79F7F-F0A6-4C2E-8E80-BC64E9F93CF4",
-				"69BDBA16-FB15-4BE6-AA4B-D4BF4B5C049F",
-				"3270BA31-7A06-428B-A0A6-40EC2A8839A5",
-				"F9A60BA0-27F2-427C-B85C-370DB1E3AB19",
-				"2733152A-0A58-47FA-AFF0-F6E9A2381B09",
-				"9690481B-A796-4780-9A97-A7FB380DC4C6",
-				"6E6707E3-880F-4EF5-8EEE-7E61912B1903",
-				"0E50C3F3-71C3-4F7C-8964-E6CB25138553",
-				"89784D56-242B-4925-B496-13B210E308F3",
-				"FB00D28E-C9B5-41A0-8E59-5DEB764D4629",
-				"E84A9FEB-1893-4F8F-9667-C410B5448681",
-				"0A350E0E-5A2B-4E00-90CA-618FE671492B",
-				"97979180-2C05-4B59-A7B5-1334F3BB3534",
-				"3FB79409-D9A0-4FE3-AC16-607B50A7919C",
-				"17920274-FFF1-497B-AB3F-88978331706F",
-				"32FB365F-DE32-4719-87D3-F26168EA3FFB",
-				"04C3035B-16C4-4626-A929-C89E6637898B",
-				"5ED17057-27F3-4F9D-8018-ACAE219E8213",
-				"4F0EA262-45B2-4D98-A5B5-916FD90C5D9F"
-			],
-			"isa": "PBXGroup",
-			"name": "src",
-			"path": "../../../addons/ofxNDI/src",
+		"CAE4D5CC-34F1-4BA4-B26D-F9E98F8A9BF7": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxColorPicker.cpp",
+			"path": "../../../addons/ofxGui/src/ofxColorPicker.cpp",
 			"sourceTree": "SOURCE_ROOT"
 		},
-		"DF925639-B05D-46CD-991B-AC4416CD22A0": {
+		"D13973C6-7EE5-4392-8EE7-121F9FBA82BA": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIRecvStream.cpp",
+			"path": "../../../addons/ofxNDI/src/ofxNDIRecvStream.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"D548B64E-CB7C-4A6C-B703-E8EBC47EC729": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIPTZ.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDIPTZ.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"D6EDB2EA-911D-4152-8534-FF6CBC65B990": {
+			"children": [
+				"13737201-731C-4B4C-B9CA-B9765BD8A062",
+				"A361A7F7-3C5C-4F1D-A8DA-F423AB9C2533",
+				"8C556B11-D63B-4196-973E-F5C521FAAB10",
+				"F391B82D-5839-46F4-8D98-157182EE6D6D",
+				"E1C1BEAB-65F0-41BC-B755-36FA2A063EFA",
+				"5DCD53EE-DD91-412F-BF3C-830465D1A088",
+				"86994248-F592-423C-8E1D-E8CA1ABFE03B",
+				"E75B5BB2-459A-4CA4-962D-D8C57AF48E1E",
+				"05185731-3275-4734-BF43-2EA1097A6837",
+				"ECFD7499-7559-4EBB-BCFB-1773C183141F",
+				"14972B02-677C-4887-8FAE-3E89238668E9",
+				"9A76D15C-F656-4612-A8B3-363207A2F820",
+				"84D05D49-749A-4385-8571-9D97EFE6FA32"
+			],
+			"isa": "PBXGroup",
+			"name": "include",
+			"path": "../../../addons/ofxNDI/libs/NDI/include",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"DA8CB23D-4702-4788-A826-87B3CC8F34A3": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIRecorder.cpp",
+			"path": "../../../addons/ofxNDI/src/ofxNDIRecorder.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"DAFDFFBC-C5A4-421B-98EF-A20FB8485B2F": {
+			"fileRef": "E8A64CF6-4AD3-4C78-890E-C41805F2BA44",
+			"isa": "PBXBuildFile",
+			"settings": {
+				"ATTRIBUTES": [
+					"CodeSignOnCopy"
+				]
+			}
+		},
+		"DC1BC0F3-DDAE-43A7-8DC1-939F2E9D50CC": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIRouter.h",
+			"path": "../../../addons/ofxNDI/src/ofxNDIRouter.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"DD10D8AD-EE2A-4561-A4D8-8746C6A44867": {
 			"explicitFileType": "sourcecode.c.h",
 			"fileEncoding": "4",
 			"isa": "PBXFileReference",
@@ -460,12 +638,20 @@
 			"path": "../../../addons/ofxNDI/src/utils/ofxNDIVideoGrabber.h",
 			"sourceTree": "SOURCE_ROOT"
 		},
-		"E3CFF4F7-92B8-42C7-8093-45838A491A75": {
+		"E0D78C0A-A1FE-4A57-887F-68776F9F3585": {
 			"explicitFileType": "sourcecode.c.h",
 			"fileEncoding": "4",
 			"isa": "PBXFileReference",
-			"name": "Processing.NDI.deprecated.h",
-			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.deprecated.h",
+			"name": "ofxInputField.h",
+			"path": "../../../addons/ofxGui/src/ofxInputField.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E1C1BEAB-65F0-41BC-B755-36FA2A063EFA": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.Lib.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Lib.h",
 			"sourceTree": "SOURCE_ROOT"
 		},
 		"E42962A92163ECCD00A6A9E2": {
@@ -486,7 +672,7 @@
 			"dstPath": "",
 			"dstSubfolderSpec": "6",
 			"files": [
-				"3DB14430-B8AE-458A-87C7-5E81AEC964E3"
+				"DAFDFFBC-C5A4-421B-98EF-A20FB8485B2F"
 			],
 			"isa": "PBXCopyFilesBuildPhase",
 			"runOnlyForDeploymentPostprocessing": "0"
@@ -572,17 +758,27 @@
 			"files": [
 				"E4B69E200A3A1BDC003C02F2",
 				"E4B69E210A3A1BDC003C02F2",
-				"38F89B40-DBF5-48CC-92DB-F81148EBD8C3",
-				"0DC1BA5E-9C4D-4313-9647-5BE62FA13337",
-				"D46BE89B-2400-4C1E-BFBF-23CBB1468E79",
-				"96021507-0E6D-4D3F-8C5E-8471D3826F72",
-				"B70A1691-2043-4D11-9463-54DD7AA6E266",
-				"3266ED81-2F10-4944-BC58-6D61452DAECE",
-				"082A867D-6033-4D8D-B092-443319472A97",
-				"A7525109-92A4-4688-9808-F5E6548B8369",
-				"9FA06931-25E0-4B5C-8998-1EFD073BD45B",
-				"4E00B0A9-7737-422B-8E69-449966C50424",
-				"CB31B3D0-BE64-4D80-BF57-53C1E3B0ABA2"
+				"43374D8C-9782-4C61-9834-78201B4BBCCC",
+				"C9DD796F-0D8E-4843-93CE-30486300A564",
+				"EE619F60-E0D2-4A16-8E18-A55898FE22DE",
+				"50604151-B1FA-4EE5-AF50-6FDA0F254E22",
+				"45266EAE-3C90-4FF8-9957-51DDE13B129A",
+				"FD693D14-3BB8-4F4D-90DC-C846650CE9A1",
+				"B8A0BA01-4E26-4C28-9C40-3A9ACC39E431",
+				"AF56BA76-C519-4C83-BB2A-8752C07660B0",
+				"0681F67F-8328-4001-BDDB-4CDAACCEB24C",
+				"33369724-604A-4DDB-AD05-D69F18A62AFE",
+				"16CD7F8A-951D-4710-9794-00E1EC941E4B",
+				"529743CD-D530-4D0D-8DFF-AD7EAEE974B1",
+				"5CBBD041-C780-4E12-B855-15606773CCBF",
+				"10319E43-2F0E-429D-88AE-F3AD0F834CFA",
+				"138549AE-99CE-44EF-8072-FD32CC8BCE98",
+				"3D4417F5-24F5-442E-91C0-9F159FE449E2",
+				"AE1ACE12-7977-4A8B-860F-E1B322427E9D",
+				"B5984C62-52FA-40E3-9491-56B342C6242E",
+				"FB28E451-CAB2-4AC6-B522-931DB397D090",
+				"28857A7E-0B8D-4516-8ED6-2D927DD8269F",
+				"4A02A702-5322-483D-B648-30E0015C04A4"
 			],
 			"isa": "PBXSourcesBuildPhase",
 			"runOnlyForDeploymentPostprocessing": "0"
@@ -637,6 +833,8 @@
 				"HEADER_SEARCH_PATHS": [
 					"$(OF_CORE_HEADERS)",
 					"src",
+					"src",
+					"../../../addons/ofxGui/src",
 					"../../../addons/ofxNDI/libs/NDI/include",
 					"../../../addons/ofxNDI/libs/utils",
 					"../../../addons/ofxNDI/src",
@@ -666,6 +864,8 @@
 				"HEADER_SEARCH_PATHS": [
 					"$(OF_CORE_HEADERS)",
 					"src",
+					"src",
+					"../../../addons/ofxGui/src",
 					"../../../addons/ofxNDI/libs/NDI/include",
 					"../../../addons/ofxNDI/libs/utils",
 					"../../../addons/ofxNDI/src",
@@ -751,61 +951,131 @@
 			"path": "Project.xcconfig",
 			"sourceTree": "<group>"
 		},
-		"E84A9FEB-1893-4F8F-9667-C410B5448681": {
+		"E75B5BB2-459A-4CA4-962D-D8C57AF48E1E": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.Routing.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Routing.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E8A64CF6-4AD3-4C78-890E-C41805F2BA44": {
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "compiled.mach-o.dylib",
+			"name": "libndi.4.dylib",
+			"path": "../../../addons/ofxNDI/libs/NDI/lib/osx/x64/libndi.4.dylib",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E97FAADE-8659-410A-93F9-101C7B0C52C2": {
+			"children": [
+				"94155BD5-C4E4-4A9E-922A-5AF6FAD6FD84",
+				"3393F69A-47DB-4452-ADAE-1CEEDE032008",
+				"0A6DD0B7-7124-4C97-87B5-777B474471C0",
+				"808AC508-06B1-4283-A17C-788084C7D17C",
+				"6020A496-831B-4EB3-AF35-92724F4EA44D",
+				"0FB64615-C756-4472-9300-9FE5E3502BA2",
+				"D548B64E-CB7C-4A6C-B703-E8EBC47EC729",
+				"F9FF93E0-6581-4ED2-B900-BE527B722482",
+				"21C07CF4-F811-4AF1-9436-49EE591ED3DD",
+				"DA8CB23D-4702-4788-A826-87B3CC8F34A3",
+				"7244B7F4-B3BF-476E-AC24-AC64D5572126",
+				"D13973C6-7EE5-4392-8EE7-121F9FBA82BA",
+				"4BD7B07B-E92E-42B4-AB0E-D087503A6FC6",
+				"A7DC6FDE-0AE9-4EE1-9E85-0A7AE68BC7C8",
+				"DC1BC0F3-DDAE-43A7-8DC1-939F2E9D50CC",
+				"8BBB9F77-8B07-4CFA-83E2-37D71AC45ADC",
+				"3D2B9B87-61F5-4A88-B55B-80FFD7CF5F51",
+				"0F43C140-77FA-4AAA-97C1-D9F9EBD11807",
+				"BD6BE6B1-0DB6-4B91-A7AE-BEFDCBCCEE4B",
+				"45EB5DDE-A38C-487E-836E-911B379EEB86"
+			],
+			"isa": "PBXGroup",
+			"name": "src",
+			"path": "../../../addons/ofxNDI/src",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"ECFD7499-7559-4EBB-BCFB-1773C183141F": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Processing.NDI.compat.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.compat.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"EE619F60-E0D2-4A16-8E18-A55898FE22DE": {
+			"fileRef": "CAE4D5CC-34F1-4BA4-B26D-F9E98F8A9BF7",
+			"isa": "PBXBuildFile"
+		},
+		"EFE44C9F-F955-4B36-B393-A272F847E48A": {
 			"explicitFileType": "sourcecode.cpp.cpp",
 			"fileEncoding": "4",
 			"isa": "PBXFileReference",
-			"name": "ofxNDIRecvStream.cpp",
-			"path": "../../../addons/ofxNDI/src/ofxNDIRecvStream.cpp",
+			"name": "ofxBaseGui.cpp",
+			"path": "../../../addons/ofxGui/src/ofxBaseGui.cpp",
 			"sourceTree": "SOURCE_ROOT"
 		},
-		"E96B9426-9C37-40E8-8B74-6D211087A2E7": {
+		"F098475D-A3CF-4136-A6C6-B726A9B92301": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxToggle.cpp",
+			"path": "../../../addons/ofxGui/src/ofxToggle.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"F21D09D3-0896-40FB-9472-DE333AB35B89": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxPanel.cpp",
+			"path": "../../../addons/ofxGui/src/ofxPanel.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"F391B82D-5839-46F4-8D98-157182EE6D6D": {
 			"explicitFileType": "sourcecode.c.h",
 			"fileEncoding": "4",
 			"isa": "PBXFileReference",
-			"name": "ofxNDIVideoCaster.h",
-			"path": "../../../addons/ofxNDI/src/utils/ofxNDIVideoCaster.h",
+			"name": "Processing.NDI.Lib.cplusplus.h",
+			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Lib.cplusplus.h",
 			"sourceTree": "SOURCE_ROOT"
 		},
-		"F11554CD-EBD8-480E-8D24-EEA0F45A912E": {
+		"F467C164-18EF-4076-A5C2-6A5CBB15D62E": {
 			"explicitFileType": "sourcecode.c.h",
 			"fileEncoding": "4",
 			"isa": "PBXFileReference",
-			"name": "DoubleBuffer.h",
-			"path": "../../../addons/ofxNDI/libs/utils/DoubleBuffer.h",
+			"name": "ofxGuiGroup.h",
+			"path": "../../../addons/ofxGui/src/ofxGuiGroup.h",
 			"sourceTree": "SOURCE_ROOT"
 		},
-		"F4C8300E-589A-41C7-A78E-6311381A2716": {
+		"F69C463B-32EC-40A6-B1FC-ADE81DA9DB15": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIVideoCaster.cpp",
+			"path": "../../../addons/ofxNDI/src/utils/ofxNDIVideoCaster.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"F9FF93E0-6581-4ED2-B900-BE527B722482": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxNDIReceiver.cpp",
+			"path": "../../../addons/ofxNDI/src/ofxNDIReceiver.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"FB28E451-CAB2-4AC6-B522-931DB397D090": {
+			"fileRef": "0F43C140-77FA-4AAA-97C1-D9F9EBD11807",
+			"isa": "PBXBuildFile"
+		},
+		"FD693D14-3BB8-4F4D-90DC-C846650CE9A1": {
+			"fileRef": "06EF0E50-A039-47CE-B6AC-BD0E26E62081",
+			"isa": "PBXBuildFile"
+		},
+		"FEB12D43-DB8D-4B68-AB50-90EB4921C55B": {
 			"children": [
-				"9301CB2E-EDAC-404E-858D-E05674819FCB",
-				"A575FDBF-FBE0-4CF6-B043-187EF85DEB32"
+				"0E80873A-BA81-4D94-A5C0-E7682B543DCB"
 			],
 			"isa": "PBXGroup",
-			"name": "libs",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"F9A60BA0-27F2-427C-B85C-370DB1E3AB19": {
-			"explicitFileType": "sourcecode.c.h",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "ofxNDIFrame.h",
-			"path": "../../../addons/ofxNDI/src/ofxNDIFrame.h",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"FB00D28E-C9B5-41A0-8E59-5DEB764D4629": {
-			"explicitFileType": "sourcecode.c.h",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "ofxNDIRecorder.h",
-			"path": "../../../addons/ofxNDI/src/ofxNDIRecorder.h",
-			"sourceTree": "SOURCE_ROOT"
-		},
-		"FF23CBD4-E722-4EA7-8E91-302C74D570E8": {
-			"explicitFileType": "sourcecode.c.h",
-			"fileEncoding": "4",
-			"isa": "PBXFileReference",
-			"name": "Processing.NDI.structs.h",
-			"path": "../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.structs.h",
+			"name": "lib",
 			"sourceTree": "SOURCE_ROOT"
 		}
 	},
