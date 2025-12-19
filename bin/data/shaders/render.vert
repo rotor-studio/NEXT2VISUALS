@@ -3,6 +3,7 @@
 uniform sampler2D posTex;
 uniform float pointSize;
 uniform float time;
+uniform float shrinkStrength;
 uniform int renderSquares;
 
 in vec4 position;
@@ -29,5 +30,8 @@ void main(){
     // convert 0..1 to clip space, flip y correctly
     vec2 clip = vec2(pos.x * 2.0 - 1.0, (1.0 - pos.y) * 2.0 - 1.0);
     gl_Position = vec4(clip, 0.0, 1.0);
-    gl_PointSize = pointSize;
+    float speed = length(vVel);
+    float shrink = clamp(pos.y + speed * 0.4, 0.0, 1.0);
+    float sizeMul = 1.0 - shrinkStrength * shrink;
+    gl_PointSize = pointSize * max(0.2, sizeMul);
 }

@@ -20,9 +20,12 @@ void ofApp::setup(){
 	pNoise_.set("noise", noiseStrength_, 0.0f, 2.5f);
 	pThreshold_.set("threshold", threshold_, 0.0f, 1.0f);
 	pPointSize_.set("point size", pointSize_, 1.0f, 15.0f);
-	pSimDensity_.set("sim density", simDensity_, 0.05f, 0.6f);
+	pSimDensity_.set("particle count", simDensity_, 0.05f, 0.6f);
 	pTopBias_.set("top bias", topBias_, 0.0f, 0.5f);
 	pBounceDampen_.set("bounce dampen", bounceDampen_, 0.1f, 1.0f);
+	pShrinkStrength_.set("shrink strength", shrinkStrength_, 0.0f, 1.0f);
+	pMaskAlpha_.set("mask alpha", maskAlpha_, 0.0f, 1.0f);
+	pTrailFade_.set("trail fade", trailFade_, 0.0f, 0.5f);
 	pCollide_.set("collide mask", collide_);
 	pInvertMask_.set("invert mask", invertMask_);
 	pShowMask_.set("show mask", showMask_);
@@ -34,10 +37,36 @@ void ofApp::setup(){
 	gui_.add(pSimDensity_);
 	gui_.add(pTopBias_);
 	gui_.add(pBounceDampen_);
+	gui_.add(pShrinkStrength_);
+	gui_.add(pMaskAlpha_);
+	gui_.add(pTrailFade_);
 	gui_.add(pCollide_);
 	gui_.add(pInvertMask_);
 	gui_.add(pShowMask_);
 	gui_.add(pRenderSquares_);
+
+	// load saved GUI settings if present
+	auto settingsPath = ofToDataPath("settings.xml", true);
+	if(ofFile::doesFileExist(settingsPath)) {
+		gui_.loadFromFile("settings.xml");
+		// sync params after load
+		gravity_ = pGravity_;
+		noiseStrength_ = pNoise_;
+		threshold_ = pThreshold_;
+		pointSize_ = pPointSize_;
+		simDensity_ = pSimDensity_;
+		topBias_ = pTopBias_;
+		bounceDampen_ = pBounceDampen_;
+		shrinkStrength_ = pShrinkStrength_;
+		maskAlpha_ = pMaskAlpha_;
+		trailFade_ = pTrailFade_;
+		collide_ = pCollide_;
+		invertMask_ = pInvertMask_;
+		showMask_ = pShowMask_;
+		renderSquares_ = pRenderSquares_;
+		computeSimRes();
+		rebuildCascade();
+	}
 }
 
 //--------------------------------------------------------------
@@ -101,6 +130,8 @@ void ofApp::update(){
 			pointSize_ = pPointSize_;
 			topBias_ = pTopBias_;
 			bounceDampen_ = pBounceDampen_;
+			shrinkStrength_ = pShrinkStrength_;
+			maskAlpha_ = pMaskAlpha_;
 			collide_ = pCollide_;
 			invertMask_ = pInvertMask_;
 			showMask_ = pShowMask_;
@@ -119,6 +150,9 @@ void ofApp::update(){
 			pPointSize_ = pointSize_;
 			pTopBias_ = topBias_;
 			pBounceDampen_ = bounceDampen_;
+			pShrinkStrength_ = shrinkStrength_;
+			pMaskAlpha_ = maskAlpha_;
+			pTrailFade_ = trailFade_;
 			pCollide_ = collide_;
 			pInvertMask_ = invertMask_;
 			pShowMask_ = showMask_;
@@ -134,12 +168,42 @@ void ofApp::update(){
 void ofApp::draw(){
 	ofBackground(0);
 
+	// draw trail/particles first
+	if(particlesReady_) {
+		ensureTrailFbo();
+		trailFbo_.begin();
+		ofPushStyle();
+		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
+		ofSetColor(0, 0, 0, static_cast<int>(trailFade_ * 255));
+		ofDrawRectangle(0, 0, trailFbo_.getWidth(), trailFbo_.getHeight());
+		ofSetColor(255);
+		drawCascade();
+		ofDisableBlendMode();
+		ofPopStyle();
+		trailFbo_.end();
+
+		ofSetColor(255);
+		// FBO texture is upside-down in GL coords; flip on draw to screen
+		trailFbo_.getTexture().draw(0, ofGetHeight(), ofGetWidth(), -ofGetHeight());
+
+		// also draw fresh cascade on top so visibility is independent of mask
+		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
+		ofSetColor(255);
+		drawCascade();
+		ofDisableBlendMode();
+	}
+
+	// draw mask with its own alpha on top
 	if(hasFrame_ && texture_.isAllocated() && showMask_) {
+		ofEnableBlendMode(OF_BLENDMODE_ADD); // add mask so it doesn't dim cascade
+		ofSetColor(255, 255, 255, static_cast<int>(maskAlpha_ * 255));
 		if(maskDrawRect_.isEmpty()) {
 			texture_.draw(0, 0, ofGetWidth(), ofGetHeight());
 		} else {
 			texture_.draw(maskDrawRect_);
 		}
+		ofDisableBlendMode();
+		ofSetColor(255);
 	} else {
 		ofSetColor(255);
 		std::string status = "Buscando fuente NDI...\nPulsa 1-9 para conectar a una fuente listada.";
@@ -160,12 +224,6 @@ void ofApp::draw(){
 		}
 	}
 
-	if(particlesReady_) {
-		ofEnableBlendMode(OF_BLENDMODE_ALPHA);
-		drawCascade();
-		ofDisableBlendMode();
-	}
-
 	if(showGui_) {
 		ofPushStyle();
 		ofSetColor(255);
@@ -178,6 +236,10 @@ void ofApp::draw(){
 void ofApp::exit(){
 	if(receiver_.isConnected()) {
 		receiver_.disconnect();
+	}
+
+	if(showGui_) {
+		gui_.saveToFile("settings.xml");
 	}
 }
 
@@ -245,6 +307,7 @@ void ofApp::mouseExited(int x, int y){
 void ofApp::windowResized(int w, int h){
 	computeSimRes();
 	rebuildCascade();
+	ensureTrailFbo();
 }
 
 //--------------------------------------------------------------
@@ -329,8 +392,33 @@ void ofApp::ensureDataFolder(){
 }
 
 //--------------------------------------------------------------
+void ofApp::ensureTrailFbo(){
+	if(trailFbo_.isAllocated() &&
+	   trailFbo_.getWidth() == ofGetWidth() &&
+	   trailFbo_.getHeight() == ofGetHeight()) {
+		return;
+	}
+	ofFbo::Settings s;
+	s.width = ofGetWidth();
+	s.height = ofGetHeight();
+	s.internalformat = GL_RGBA;
+	s.useDepth = false;
+	s.useStencil = false;
+	s.textureTarget = GL_TEXTURE_2D;
+	s.minFilter = GL_LINEAR;
+	s.maxFilter = GL_LINEAR;
+	s.wrapModeHorizontal = GL_CLAMP_TO_EDGE;
+	s.wrapModeVertical = GL_CLAMP_TO_EDGE;
+	trailFbo_.allocate(s);
+	trailFbo_.begin();
+	ofClear(0,0,0,255);
+	trailFbo_.end();
+}
+
+//--------------------------------------------------------------
 void ofApp::setupCascade(){
 	computeSimRes();
+	ensureTrailFbo();
 
 	// load shaders once
 	if(!shadersLoaded_) {
@@ -465,6 +553,7 @@ void ofApp::drawCascade(){
 	renderShader_.setUniform2f("screenRes", ofGetWidth(), ofGetHeight());
 	renderShader_.setUniform1f("pointSize", pointSize_);
 	renderShader_.setUniform1f("time", ofGetElapsedTimef());
+	renderShader_.setUniform1f("shrinkStrength", shrinkStrength_);
 	renderShader_.setUniform1i("renderSquares", renderSquares_ ? 1 : 0);
 	particleMesh_.draw();
 	renderShader_.end();

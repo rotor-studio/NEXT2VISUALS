@@ -36,6 +36,7 @@ class ofApp : public ofBaseApp{
 		void computeSimRes();
 		void setupCascade();
 		void rebuildCascade();
+		void ensureTrailFbo();
 		void initParticles();
 		void updateParticles(float dt);
 		void drawCascade();
@@ -74,10 +75,14 @@ class ofApp : public ofBaseApp{
 		float topBias_ = 0.0f;
 		float bounceDampen_ = 0.5f;
 		bool renderSquares_ = false;
+		float shrinkStrength_ = 0.5f;
+		float maskAlpha_ = 1.0f;
+		float trailFade_ = 0.1f;
 
 		ofRectangle maskDrawRect_;
 		float simDensity_ = 0.15f; // particles per pixel on width (lighter)
 		glm::ivec2 lastInitRes_{0,0};
+		ofFbo trailFbo_;
 
 		// GUI
 		ofxPanel gui_;
@@ -89,6 +94,9 @@ class ofApp : public ofBaseApp{
 		ofParameter<float> pSimDensity_;
 		ofParameter<float> pTopBias_;
 		ofParameter<float> pBounceDampen_;
+		ofParameter<float> pShrinkStrength_;
+		ofParameter<float> pMaskAlpha_;
+		ofParameter<float> pTrailFade_;
 		ofParameter<bool> pCollide_;
 		ofParameter<bool> pInvertMask_;
 		ofParameter<bool> pShowMask_;
