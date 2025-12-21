@@ -80,6 +80,8 @@ class ofApp : public ofBaseApp{
 		bool renderSquares_ = false;
 		float shrinkStrength_ = 0.5f;
 		float maskAlpha_ = 1.0f;
+		float killFraction_ = 0.0f; // chance to kill on collision
+		float bounceNoise_ = 0.35f;
 		float trailFade_ = 0.1f;
 
 		ofRectangle maskDrawRect_;
@@ -106,6 +108,8 @@ class ofApp : public ofBaseApp{
 		ofParameter<float> pBounceDampen_;
 		ofParameter<float> pShrinkStrength_;
 		ofParameter<float> pMaskAlpha_;
+		ofParameter<float> pKillFraction_;
+		ofParameter<float> pBounceNoise_;
 		ofParameter<float> pTrailFade_;
 		ofParameter<bool> pCollide_;
 		ofParameter<bool> pInvertMask_;

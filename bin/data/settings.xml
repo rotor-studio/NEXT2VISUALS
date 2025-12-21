@@ -1,16 +1,20 @@
 <?xml version="1.0"?>
 <NEXT2VISUALS>
-	<gravity>0.4555</gravity>
-	<noise>0.1125</noise>
-	<threshold>0.65</threshold>
-	<point_size>3.1</point_size>
+	<gravity>0.1</gravity>
+	<noise>0</noise>
+	<threshold>0.785</threshold>
+	<point_size>1.49</point_size>
 	<sim_density>0.329555</sim_density>
 	<collide_mask>1</collide_mask>
 	<invert_mask>0</invert_mask>
 	<show_mask>0</show_mask>
 	<top_bias>0</top_bias>
-	<bounce_dampen>0.5</bounce_dampen>
-	<shrink_strength>0.5</shrink_strength>
-	<mask_alpha>1</mask_alpha>
+	<bounce_dampen>0.388</bounce_dampen>
+	<shrink_strength>0.935</shrink_strength>
+	<mask_alpha>0.82</mask_alpha>
 	<render_squares>0</render_squares>
+	<particle_count>0.001</particle_count>
+	<trail_fade>0.2625</trail_fade>
+	<bounce_noise>1.3</bounce_noise>
+	<kill_on_hit>0.7125</kill_on_hit>
 </NEXT2VISUALS>

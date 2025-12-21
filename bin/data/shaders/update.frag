@@ -13,6 +13,8 @@ uniform int invertMask;
 uniform float topBias;
 uniform float bounceDampen;
 uniform float time;
+uniform float killFraction;
+uniform float bounceNoise;
 
 in vec2 vTexCoord;
 out vec4 fragColor;
@@ -51,12 +53,24 @@ void main(){
 
     // bounce / splash on bright
     if(collide == 1 && maskInfluence > 0.5 && vel.y > 0.0){
-        float bounce = mix(0.35, 0.65, maskInfluence) * bounceDampen;
-        vel.y *= -bounce;
-        float nn = hash(vTexCoord + time * 0.7);
-        vel.x += (nn - 0.5) * (0.35 + maskInfluence * 0.5);
-        vel.y += gravity * 0.5 * dt;
-        pos.y = clamp(pos.y - 0.005, 0.0, 1.0);
+        float dieRoll = hash(vTexCoord * 19.37 + time * 0.21);
+        if(dieRoll < killFraction){
+            float r = hash(vTexCoord.yx * 3.17 + time);
+            float bias = mix(0.0, 0.25, topBias);
+            pos = vec2(r, -0.05 + bias);
+            vel = vec2(0.0, 0.0);
+        } else {
+            float bounce = mix(0.35, 0.65, maskInfluence) * bounceDampen;
+            vel.y *= -bounce;
+            float nn = hash(vTexCoord + time * 0.7);
+            // add directional jitter to break continuous flows
+            vec2 scatter = vec2(hash(vTexCoord * 11.3 + time * 0.9),
+                                hash(vTexCoord * 15.7 - time * 0.4)) - 0.5;
+            vel += scatter * bounceNoise * (0.4 + maskInfluence * 0.6);
+            vel.x += (nn - 0.5) * (0.35 + maskInfluence * 0.5);
+            vel.y += gravity * 0.5 * dt;
+            pos.y = clamp(pos.y - 0.005, 0.0, 1.0);
+        }
     }
 
     // clamp velocity
